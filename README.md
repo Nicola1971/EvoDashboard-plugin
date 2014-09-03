@@ -6,6 +6,8 @@ EvoDashboard is a modern and customizable Welcome Dashboard for MODx Evolution w
 
 The most important difference between **OnManagerWelcomeCustom** and **EvoDashboard** is that EvoDashboard works with all MODX Evolution manager themes !
 
+![evodashboard](https://raw.githubusercontent.com/Nicola1971/training-materials/master/Images/evodashboard.jpg)
+
 # Upgrade from OnManagerWelcomeCustom
 
 * disable/delete OnManagerWelcomeCustom
