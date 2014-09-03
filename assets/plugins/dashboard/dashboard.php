@@ -9,8 +9,8 @@ OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerP
 */
 
 /* home switch home */
-$WelcomeUrl = isset($WelcomeUrl) ? $WelcomeUrl : '../assets/plugins/omwc/welcome.tpl';
-$StylesUrl = isset($StylesUrl) ? $StylesUrl : '../assets/plugins/omwc/dashboard.css';
+$WelcomeUrl = isset($WelcomeUrl) ? $WelcomeUrl : '../assets/plugins/dashboard/welcome.tpl';
+$StylesUrl = isset($StylesUrl) ? $StylesUrl : '../assets/plugins/dashboard/dashboard.css';
 $cssOutput = isset($cssOutput) ? $cssOutput : '';
 
 //blocks
