@@ -1,9 +1,9 @@
 <?php
-/* OnManagerWelcomeCustom 3.0 pl
+/* EvoDashboard 1.0 pl
 Instructions:
-check event:
+System event:
 OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
-
+Configuration:
 &PluginDashboard= Default Dashboard:;list;yes,no;yes &PluginStyles= Load Plugin dashboard styles:;list;no,yes;yes &CustomLogo= Enable Custom Logo:;list;yes,no;yes &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &SocialBox= Enable Social Box:;list;yes,no;yes &SocialBoxSize= Social Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &SocialBoxEvoEvent= Social Box placement:;list;OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeHome &SocialTitle= Social box title:;string;Social &SocialChunk= Social box chunk:;string;Welcome_SocialLinks &LinksBox= Enable Links Box:;list;yes,no;yes &LinksBoxEvoEvent= Links Box placement:;list;OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &LinksBoxSize= Links Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &CustomLinksTitle= Links box title:;string;Links &CustomLinksChunk= Links box chunk:;string;Welcome_CustomLinks &ListBox= Enable List documents:;list;yes,no;yes &ListBoxEvoEvent= List Box placement:;list;OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &ListBoxSize= List Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &ListMode= List Box mode:;list;basic,advanced;basic &ListBoxTitle=Edit List documents Title:;string;Latest Blog Entries &ParentFolder=Parent folder for List documents:;string;2 &ListItems=Max items in List:;string;20 &hideFolders= Hide Folders from List:;list;yes,no;no &dittolevel= Depht:;string;1
 
 */
