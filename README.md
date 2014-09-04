@@ -8,6 +8,13 @@ The most important difference between **OnManagerWelcomeCustom** and **EvoDashbo
 
 ![evodashboard](https://raw.githubusercontent.com/Nicola1971/training-materials/master/Images/evodashboard.jpg)
 
+# Upgrades
+
+## 1.1 pl
+
+* Logo no more use a System Event
+* Now you can use all three events to position the widgets!
+
 # Upgrade from OnManagerWelcomeCustom
 
 * disable/delete OnManagerWelcomeCustom
