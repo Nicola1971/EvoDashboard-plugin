@@ -16,14 +16,15 @@ function doHideShow(divName){
 <div class="dashboard">
  <h1>[+site_name+]</h1>
                 <!--social links box-->
-[+OnManagerWelcomeHome+]
+                [+OnManagerWelcomePrerender+]
+
      <!--end social links--->
 <div class="dashboard-block-full">
 <div class="sectionHeader"><i class="fa fa-home"></i> [+welcome_title+]<a href="javascript:void(null);" onclick="doHideShow('idShowHide1');"><i class="fa fa-bars expandbuttn"></i></a></div>
 			<div id="idShowHide1" class="sectionBody">
 
 
-                         <span class="wm_button white" style="border:0">[+OnManagerWelcomePrerender+]</span>
+                         <span class="wm_button white" style="border:0">[+Logo+]</span>
                        <span class="wm_button red" style="border:0">[+SecurityIcon+]</span>
                         <div class="wm_button green" style="border:0">[+WebUserIcon+]</div>
                         <div class="wm_button azure" style="border:0">[+ModulesIcon+]</div>
@@ -32,11 +33,8 @@ function doHideShow(divName){
                                            <br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" />
 
 
-          </div>
-
-                                </div>
-
-
+          </div>                 </div>
+                                 [+OnManagerWelcomeHome+]
                                   <!-- custom links-->
                                 [+OnManagerWelcomeRender+]
                                 <!--end custom links-->

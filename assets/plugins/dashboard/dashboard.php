@@ -1,10 +1,10 @@
 <?php
-/* EvoDashboard 1.0 pl
+/* EvoDashboard 1.1 pl
 Instructions:
 System event:
 OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
 Configuration:
-&PluginDashboard= Default Dashboard:;list;yes,no;yes &PluginStyles= Load Plugin dashboard styles:;list;no,yes;yes &CustomLogo= Enable Custom Logo:;list;yes,no;yes &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &SocialBox= Enable Social Box:;list;yes,no;yes &SocialBoxSize= Social Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &SocialBoxEvoEvent= Social Box placement:;list;OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeHome &SocialTitle= Social box title:;string;Social &SocialChunk= Social box chunk:;string;Welcome_SocialLinks &LinksBox= Enable Links Box:;list;yes,no;yes &LinksBoxEvoEvent= Links Box placement:;list;OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &LinksBoxSize= Links Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &CustomLinksTitle= Links box title:;string;Links &CustomLinksChunk= Links box chunk:;string;Welcome_CustomLinks &ListBox= Enable List documents:;list;yes,no;yes &ListBoxEvoEvent= List Box placement:;list;OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &ListBoxSize= List Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &ListMode= List Box mode:;list;basic,advanced;basic &ListBoxTitle=Edit List documents Title:;string;Latest Blog Entries &ParentFolder=Parent folder for List documents:;string;2 &ListItems=Max items in List:;string;20 &hideFolders= Hide Folders from List:;list;yes,no;no &dittolevel= Depht:;string;1
+&PluginDashboard= Default Dashboard:;list;yes,no;yes &PluginStyles= Load Plugin dashboard styles:;list;no,yes;yes &CustomLogo= Enable Custom Logo:;list;yes,no;yes &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &SocialBox= Enable Social Box:;list;yes,no;yes &SocialBoxSize= Social Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &SocialBoxEvoEvent= Social Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomePrerender &SocialTitle= Social box title:;string;Social &SocialChunk= Social box chunk:;string;Welcome_SocialLinks &LinksBox= Enable Links Box:;list;yes,no;yes &LinksBoxEvoEvent= Links Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &LinksBoxSize= Links Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &CustomLinksTitle= Links box title:;string;Links &CustomLinksChunk= Links box chunk:;string;Welcome_CustomLinks &ListBox= Enable List documents:;list;yes,no;yes &ListBoxEvoEvent= List Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &ListBoxSize= List Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &ListMode= List Box mode:;list;basic,advanced;basic &ListBoxTitle=Edit List documents Title:;string;Latest Blog Entries &ParentFolder=Parent folder for List documents:;string;2 &ListItems=Max items in List:;string;20 &hideFolders= Hide Folders from List:;list;yes,no;no &dittolevel= Depht:;string;1
 
 */
 
@@ -43,11 +43,13 @@ if ($PluginDashboard == yes) {
 
 }
 /*OnManagerWelcomePrerender - Custom logo */
-if($e->name == 'OnManagerWelcomePrerender') {
+
+//if($e->name == 'OnManagerWelcomePrerender') {
 if ($CustomLogo == yes) {
 $LogoOutput = $modx->getChunk(''.$LogoChunk.'');
 }
-}
+$modx->setPlaceholder('Logo', $LogoOutput);
+//}
 //end logo
 /*Social Box */
 if($e->name == ''.$SocialBoxEvoEvent.'') {
@@ -89,12 +91,13 @@ $params['hideFolders'] = '1';
 $params['hideFolders'] = '0';
 }
 // run Ditto
-$List = $modx->runSnippet('Ditto', $params);
-$ListOutput = '<div class="'.$ListBoxSize.'"><div class="sectionHeader"><i class="fa fa-pencil"></i> '.$ListBoxTitle.'<a href="javascript:void(null);" onclick="doHideShow(\'idShowHideListBox\');"><i class="fa fa-bars expandbuttn"></i></a></div><div id="idShowHideListBox" class="dashboard-block-content sectionBody"><ul> '.$List.' </ul><br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div>';
+$list = $modx->runSnippet('Ditto', $params);
+$ListOutput = '<div class="'.$ListBoxSize.'"><div class="sectionHeader"><i class="fa fa-pencil"></i> '.$ListBoxTitle.'<a href="javascript:void(null);" onclick="doHideShow(\'idShowHideListBox\');"><i class="fa fa-bars expandbuttn"></i></a></div>
+<div id="idShowHideListBox" class="dashboard-block-content sectionBody"><ul>'.$list.'</ul><br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div>';
 }
 }
 //end list
-$output .= $cssOutput.$LogoOutput.$SocialOutput.$ListOutput.$LinksOutput;
+$output .= $cssOutput.$SocialOutput.$ListOutput.$LinksOutput;
 $e->output($output);
 return;
 ?>
