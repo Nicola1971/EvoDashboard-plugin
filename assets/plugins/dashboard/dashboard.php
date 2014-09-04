@@ -89,9 +89,8 @@ $params['hideFolders'] = '1';
 $params['hideFolders'] = '0';
 }
 // run Ditto
-$list = $modx->runSnippet('Ditto', $params);
-$ListOutput = '<div class="'.$ListBoxSize.'"><div class="sectionHeader"><i class="fa fa-pencil"></i> '.$ListBoxTitle.'<a href="javascript:void(null);" onclick="doHideShow(\'idShowHideListBox\');"><i class="fa fa-bars expandbuttn"></i></a></div>
-<div id="idShowHideListBox" class="dashboard-block-content sectionBody"><ul>'.$list.'</ul><br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div>';
+$List = $modx->runSnippet('Ditto', $params);
+$ListOutput = '<div class="'.$ListBoxSize.'"><div class="sectionHeader"><i class="fa fa-pencil"></i> '.$ListBoxTitle.'<a href="javascript:void(null);" onclick="doHideShow(\'idShowHideListBox\');"><i class="fa fa-bars expandbuttn"></i></a></div><div id="idShowHideListBox" class="dashboard-block-content sectionBody"><ul> '.$List.' </ul><br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div>';
 }
 }
 //end list
