@@ -3,9 +3,11 @@
  *
  * Samples of Custom Links on Welcome Dashboard
  *
- * @author    Nicola Lambathakis
- * @category    plugin
- * @internal @modx_category Dashboard
+ * @version 	1.1
+ * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
+ * @category	chunk
+ * @internal    @modx_category Dashboard
+ * @internal    @installset base, sample
  */
 <!--horiz separator-->
 <div class="dashSeparator"><h3>Blogging / Web Applicaton shortcuts</h3></div>
