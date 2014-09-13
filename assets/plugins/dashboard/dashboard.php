@@ -42,9 +42,9 @@ if ($PluginDashboard == yes) {
 }
 
 }
-/*OnManagerWelcomePrerender - Custom logo */
+/*Custom logo */
 
-//if($e->name == 'OnManagerWelcomePrerender') {
+//logo
 if ($CustomLogo == yes) {
 $LogoOutput = $modx->getChunk(''.$LogoChunk.'');
 }
