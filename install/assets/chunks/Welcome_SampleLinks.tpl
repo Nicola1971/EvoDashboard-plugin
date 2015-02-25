@@ -1,5 +1,5 @@
 /**
- * Welcome_CustomLinksSample
+ * Welcome_SampleLinks
  *
  * Samples of Custom Links on Welcome Dashboard
  *
