@@ -90,10 +90,10 @@ if ($ListBox == yes) {
 $parentId = $ParentFolder;
 $dittototal = $ListItems;
 	if ($ListMode == advanced) {
-$rowTpl = '@CODE: <li><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye green2"></i></a> <a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o red2"></i></a> <a href="index.php?a=51&id=[+id+]" title="move"><i class="fa fa-arrows blueberry"></i></a> <a href="index.php?a=62&id=[+id+]" title="unpublish"><i class="fa fa-square-o blueberry"></i></a> <a href="index.php?a=6&id=[+id+]" title="delete"><i class="fa fa-trash-o red2"></i></a> <b>[+pagetitle+]</b> ([+id+])</li>';
+$rowTpl = '@CODE: <li><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye icon-color-light-green icon-no-border"></i></a> <a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o icon-color-red icon-no-border"></i></a> <a href="index.php?a=51&id=[+id+]" title="move"><i class="fa fa-arrows icon-color-blue icon-no-border"></i></a> <a href="index.php?a=62&id=[+id+]" title="unpublish"><i class="fa fa-square-o blueberry"></i></a> <a href="index.php?a=6&id=[+id+]" title="delete"><i class="fa fa-trash-o icon-color-red icon-no-border"></i></a> <b>[+pagetitle+]</b> ([+id+])</li>';
 }
 	if ($ListMode == basic) {
-$rowTpl = '@CODE: <li><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye green2"></i></a> <a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o red2"></i></a> <b>[+pagetitle+]</b> ([+id+])</li>';
+$rowTpl = '@CODE: <li><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye icon-color-light-green icon-no-border"></i></a> <a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o icon-color-red icon-no-border"></i></a> <b>[+pagetitle+]</b> ([+id+])</li>';
 }
 $outerTpl = '@CODE: [+wf.wrapper+]';
 // Ditto parameters
