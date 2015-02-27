@@ -9,6 +9,10 @@ The most important difference between **OnManagerWelcomeCustom** and **EvoDashbo
 ![evodashboard](https://raw.githubusercontent.com/Nicola1971/training-materials/master/Images/evodashboard.jpg)
 
 # Upgrades
+## 2.0 RC
+
+Complete code refactoring in Boostrap 3!!
+
 ## 1.2 pl
 
 * updated Font Awesome 4.3.0
