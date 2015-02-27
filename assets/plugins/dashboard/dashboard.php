@@ -26,7 +26,24 @@ $ListBoxEvoEvent = isset($ListBoxEvoEvent) ? $ListBoxEvoEvent : 'OnManagerWelcom
 $SocialBoxSize = isset($SocialBoxSize) ? $SocialBoxSize : 'dashboard-block-full';
 $LinksBoxSize = isset($LinksBoxSize) ? $LinksBoxSize : 'dashboard-block-full';
 $ListBoxSize = isset($ListBoxSize) ? $ListBoxSize : 'dashboard-block-full';
-
+//widget grid size
+if ($LinksBoxSize == 'dashboard-block-full') {
+$LinksBoxWidth = 'col-sm-12';
+} else {
+$LinksBoxWidth = 'col-sm-6';
+}
+//widget grid size
+if ($SocialBoxSize == 'dashboard-block-full') {
+$SocialBoxWidth = 'col-sm-12';
+} else {
+$SocialBoxWidth = 'col-sm-6';
+}
+//widget grid size
+if ($ListBoxSize == 'dashboard-block-full') {
+$ListBoxWidth = 'col-sm-12';
+} else {
+$ListBoxWidth = 'col-sm-6';
+}
 // Run Events
 $output = "";
 $e = &$modx->Event;
@@ -54,16 +71,16 @@ $modx->setPlaceholder('Logo', $LogoOutput);
 /*Social Box */
 if($e->name == ''.$SocialBoxEvoEvent.'') {
 if ($SocialBox == yes) {
-$SocialOutput = '<div class="'.$SocialBoxSize.'"> <div class="sectionHeader"><i class="fa fa-globe"></i> '.$SocialTitle.'<a href="javascript:void(null);" onclick="doHideShow(\'idShowHideSocialBox\');"><i class="fa fa-bars expandbuttn"></i></a></div>
-<div id="idShowHideSocialBox" class="sectionBody">'.$modx->getChunk(''.$SocialChunk.'').' <br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div>';
+$SocialOutput = '<div class="'.$SocialBoxWidth.'"> <div class="widget-wrapper"> <div class="widget-title sectionHeader"><i class="fa fa-globe"></i> '.$SocialTitle.'</div>
+<div class="widget-stage sectionBody">'.$modx->getChunk(''.$SocialChunk.'').' <br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div></div>';
 }
 }
 //end social
 /*Custom links box*/
 if($e->name == ''.$LinksBoxEvoEvent.'') {
 if ($LinksBox == yes) {
-$LinksOutput = '<div class="'.$LinksBoxSize.'"> <div class="sectionHeader"><i class="fa fa-tachometer"></i> '.$CustomLinksTitle.'<a href="javascript:void(null);" onclick="doHideShow(\'idShowHideLinksBox\');"><i class="fa fa-bars expandbuttn"></i></a></div>
-<div id="idShowHideLinksBox" class="sectionBody">'.$modx->getChunk(''.$CustomLinksChunk.'').' <br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div>';
+$LinksOutput = '<div class="'.$LinksBoxWidth.'"> <div class="widget-wrapper"> <div class="widget-title sectionHeader"><i class="fa fa-tachometer"></i> '.$CustomLinksTitle.'</div>
+<div class="widget-stage sectionBody">'.$modx->getChunk(''.$CustomLinksChunk.'').' <br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div></div>';
 }
 }
 //end links
@@ -92,8 +109,8 @@ $params['hideFolders'] = '0';
 }
 // run Ditto
 $list = $modx->runSnippet('Ditto', $params);
-$ListOutput = '<div class="'.$ListBoxSize.'"><div class="sectionHeader"><i class="fa fa-pencil"></i> '.$ListBoxTitle.'<a href="javascript:void(null);" onclick="doHideShow(\'idShowHideListBox\');"><i class="fa fa-bars expandbuttn"></i></a></div>
-<div id="idShowHideListBox" class="dashboard-block-content sectionBody"><ul>'.$list.'</ul><br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div>';
+$ListOutput = '<div class="'.$ListBoxWidth.'"> <div class="widget-wrapper"> <div class="widget-title sectionHeader"><i class="fa fa-pencil"></i> '.$ListBoxTitle.'</div>
+<div class="widget-stage sectionBody"><ul>'.$list.'</ul><br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div></div>';
 }
 }
 //end list
