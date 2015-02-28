@@ -35,7 +35,7 @@
 <div class="wm_button"><a href="index.php?a=4&pid=2"><i class="icon-custom rounded-2x icon-bg-blue fa fa-pencil fa-4x "></i><br />New Blog Post</a></div>
 
 <!--Edit a resource - replace "2" with your resouce id-->
-<div class="wm_button"><a href="index.php?a=27&id=2"><i class="icon-custom rounded-2x icon-bg-red fa fa-pencil-square-o fa-4x fa-fw"></i><br />Edit a page</a></div>
+<div class="wm_button"><a href="index.php?a=27&id=1"><i class="icon-custom rounded-2x icon-bg-red fa fa-home fa-4x fa-fw"></i><br />Edit HomePage</a></div>
 <!--Create a resource-->
 <div class="wm_button"><a href="index.php?a=4"><i class="icon-custom rounded-x icon-bg-dark fa fa-file fa-4x fa-fw"></i><br />New doc</a></div>
 <div class="wm_button"><a href="index.php?a=72"><i class="icon-custom rounded-x icon-bg-orange fa fa-link fa-4x fa-fw"></i><br />New Link</a></div>
