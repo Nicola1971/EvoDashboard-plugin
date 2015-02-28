@@ -24,7 +24,7 @@
    <ul class="dropdown-menu" role="menu">
       <li><a href="index.php?a=86">Roles</a></li>
       <li><a href="index.php?a=75">Manager Users</a></li>
-      <li><a href="/index.php?a=99">Web Users</a></li>
+      <li><a href="index.php?a=99">Web Users</a></li>
    </ul>
 </div>
 
