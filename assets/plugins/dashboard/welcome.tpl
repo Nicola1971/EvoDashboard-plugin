@@ -1,5 +1,7 @@
   <link rel="stylesheet" type="text/css" href="../assets/plugins/dashboard/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" type="text/css" href="../assets/plugins/dashboard/bootstrap/css/bootstrap-theme.css" />
+    <script type="text/javascript" src="../assets/plugins/dashboard/bootstrap/js/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/dashboard/bootstrap/js/bootstrap.min.js"></script>
 <div class="container-fluid dashboard">
       <!-- row -->
     <div class="row">
@@ -123,5 +125,3 @@
 
   </div>
 
-  <script type="text/javascript" src="../assets/plugins/dashboard/bootstrap/js/jquery.min.js"></script>
-  <script type="text/javascript" src="../assets/plugins/dashboard/bootstrap/js/bootstrap.min.js"></script>
