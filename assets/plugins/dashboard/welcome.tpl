@@ -28,25 +28,21 @@
                         <span class="btn btn-success">[+ModulesIcon+]</span>
                         <span class="btn btn-info">[+ResourcesIcon+]</span>
                         <span class="btn btn-warning">[+BackupIcon+]</span>
-
           </div>
-
          </div>
       </div>
-
+ </div>
 
                     <!-- row -->
    <div class="row">
-       <div class="col-sm-12">
      [+OnManagerWelcomeHome+]
 [+OnManagerWelcomeRender+]
-</div>
-    </div>
+   </div>
 
+                   <!-- end row -->
 
+<div class="row">
 
-                  <div class="row">
-   <div class="col-sm-12">
       <div class="col-sm-6">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader">
@@ -55,9 +51,9 @@
           <div class="widget-stage sectionBody">
            <i class="fa fa-info-circle fa-5x  icon-color-verylight"></i>	   [+UserInfo+]
           </div>
-
          </div>
       </div>
+
      <div class="col-sm-6">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader">
@@ -69,12 +65,11 @@
         </div>
       </div>
 
-    </div>
  </div>
 
 
-    <div class="row">
-   <div class="col-sm-12">
+<div class="row">
+
       <div class="col-sm-6">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader">
@@ -95,10 +90,11 @@
           </div>
         </div>
      </div>
-   </div>
-      </div>
+
+</div>
+
 <div class="row">
-  <div class="col-sm-12">
+
       <div class="col-sm-6">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader">
@@ -119,9 +115,8 @@
           </div>
         </div>
       </div>
-    </div>
 
-   </div>
+</div>
     <hr>
 
 
