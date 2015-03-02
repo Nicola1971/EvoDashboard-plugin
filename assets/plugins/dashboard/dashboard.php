@@ -110,7 +110,7 @@ $params['hideFolders'] = '0';
 // run Ditto
 $list = $modx->runSnippet('Ditto', $params);
 $ListOutput = '<div class="'.$ListBoxWidth.'"> <div class="widget-wrapper"> <div class="widget-title sectionHeader"><i class="fa fa-pencil"></i> '.$ListBoxTitle.'</div>
-<div class="widget-stage sectionBody"><ul>'.$list.'</ul><br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div></div>';
+<div class="widget-stage sectionBody overflowscroll"><ul>'.$list.'</ul><br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div></div>';
 }
 }
 //end list
