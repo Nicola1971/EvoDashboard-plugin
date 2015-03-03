@@ -1,4 +1,4 @@
-EvoDashboard-plugin 2.0.4
+EvoDashboard-plugin 2.0.5
 ===================
 Info and docs: http://www.tattoocms.it/extras/plugins/evodashboard-plugin-modx-evolution-dashboard.html
 
@@ -9,6 +9,11 @@ The most important difference between **OnManagerWelcomeCustom** and **EvoDashbo
 ![evodashboard](https://raw.githubusercontent.com/Nicola1971/training-materials/master/Images/evodashboard.jpg)
 
 # Upgrades
+
+## 2.5 RC
+
+Document list widget restyled in boostrap tables
+
 ## 2.0 RC
 
 Complete code refactoring in Boostrap 3!!
