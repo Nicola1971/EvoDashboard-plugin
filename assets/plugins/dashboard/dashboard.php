@@ -87,10 +87,10 @@ if($e->name == ''.$ListBoxEvoEvent.'') {
 $parentId = $ParentFolder;
 $dittototal = $ListItems;
 	if ($ListMode == advanced) {
-$rowTpl = '@CODE: <tr><td width="5%"><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye icon-color-light-green icon-no-border"></i></a></td><td width="5%><a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o icon-color-red icon-no-border"></i></a></td><td width="5%><a href="index.php?a=51&id=[+id+]" title="move"><i class="fa fa-arrows icon-color-blue icon-no-border"></i></a></td><td width="5%><a href="index.php?a=62&id=[+id+]" title="unpublish"><i class="fa fa-square-o icon-color-grey icon-no-border"></i></a></td><td><a href="index.php?a=6&id=[+id+]" title="delete"><i class="fa fa-trash-o icon-color-red icon-no-border"></i></a></td><td> <b>[+pagetitle+]</b> ([+id+])</td></tr>';
+$rowTpl = '@CODE: <tr><td width="5%"><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye icon-color-light-green icon-no-border"></i></a></td><td width="5%"><a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o icon-color-red icon-no-border"></i></a></td><td width="5%"><a href="index.php?a=51&id=[+id+]" title="move"><i class="fa fa-arrows icon-color-blue icon-no-border"></i></a></td><td width="5%"><a href="index.php?a=62&id=[+id+]" title="unpublish"><i class="fa fa-square-o icon-color-grey icon-no-border"></i></a></td><td><a href="index.php?a=6&id=[+id+]" title="delete"><i class="fa fa-trash-o icon-color-red icon-no-border"></i></a></td><td> <b>[+pagetitle+]</b> ([+id+])</td></tr>';
 }
 	if ($ListMode == basic) {
-$rowTpl = '@CODE: <tr><td width="5%><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye green2"></i></a></td><td width="5%><a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o icon-color-red icon-no-border"></i></a> </td><td><b>[+pagetitle+]</b> ([+id+])</td></tr>';
+$rowTpl = '@CODE: <tr><td width="5%"><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye green2"></i></a></td><td width="5%"><a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o icon-color-red icon-no-border"></i></a> </td><td><b>[+pagetitle+]</b> ([+id+])</td></tr>';
 }
 $outerTpl = '@CODE: <tr>[+wf.wrapper+]</tr>';
 // Ditto parameters
