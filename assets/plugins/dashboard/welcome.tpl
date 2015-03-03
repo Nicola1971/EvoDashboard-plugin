@@ -109,7 +109,7 @@
       </div>
       <div class="col-sm-6">
         <div class="widget-wrapper">
-          <div class="widget-title sectionHeader">
+          <div class="widget-title sectionHeader table-striped">
           [+onlineusers_title+]
           </div>
           <div class="widget-stage sectionBody">
@@ -124,4 +124,3 @@
 
 
   </div>
-

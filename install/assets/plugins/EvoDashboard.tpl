@@ -6,7 +6,7 @@
  *
  * @author    Nicola Lambathakis
  * @category    plugin
- * @version    2.0.4 pl
+ * @version    2.0.5 pl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  * @internal    @events OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
  * @internal    @installset base

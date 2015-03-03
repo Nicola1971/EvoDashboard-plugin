@@ -1,5 +1,5 @@
 <?php
-/* EvoDashboard 2.0.4 pl
+/* EvoDashboard 2.0.5 pl
 Instructions:
 System event:
 OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
@@ -84,16 +84,15 @@ $LinksOutput = '<div class="'.$LinksBoxWidth.'"> <div class="widget-wrapper"> <d
 //end links
 /*List documents box*/
 if($e->name == ''.$ListBoxEvoEvent.'') {
-if ($ListBox == yes) {
 $parentId = $ParentFolder;
 $dittototal = $ListItems;
 	if ($ListMode == advanced) {
-$rowTpl = '@CODE: <li><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye icon-color-green icon-no-border"></i></a> <a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o icon-color-red icon-no-border"></i></a> <a href="index.php?a=51&id=[+id+]" title="move"><i class="fa fa-arrows icon-color-blue icon-no-border"></i></a> <a href="index.php?a=62&id=[+id+]" title="unpublish"><i class="fa fa-square-o blueberry"></i></a> <a href="index.php?a=6&id=[+id+]" title="delete"><i class="fa fa-trash-o icon-color-red icon-no-border"></i></a> <b>[+pagetitle+]</b> ([+id+])</li>';
+$rowTpl = '@CODE: <tr><td width="5%"><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye icon-color-light-green icon-no-border"></i></a></td><td width="5%><a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o icon-color-red icon-no-border"></i></a></td><td width="5%><a href="index.php?a=51&id=[+id+]" title="move"><i class="fa fa-arrows icon-color-blue icon-no-border"></i></a></td><td width="5%><a href="index.php?a=62&id=[+id+]" title="unpublish"><i class="fa fa-square-o icon-color-grey icon-no-border"></i></a></td><td><a href="index.php?a=6&id=[+id+]" title="delete"><i class="fa fa-trash-o icon-color-red icon-no-border"></i></a></td><td> <b>[+pagetitle+]</b> ([+id+])</td></tr>';
 }
 	if ($ListMode == basic) {
-$rowTpl = '@CODE: <li><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye icon-color-green icon-no-border"></i></a> <a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o icon-color-red icon-no-border"></i></a> <b>[+pagetitle+]</b> ([+id+])</li>';
+$rowTpl = '@CODE: <tr><td width="5%><a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye green2"></i></a></td><td width="5%><a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o icon-color-red icon-no-border"></i></a> </td><td><b>[+pagetitle+]</b> ([+id+])</td></tr>';
 }
-$outerTpl = '@CODE: [+wf.wrapper+]';
+$outerTpl = '@CODE: <tr>[+wf.wrapper+]</tr>';
 // Ditto parameters
 $params['parents'] = $parentId;
 $params['depth'] = $dittolevel;
@@ -107,9 +106,8 @@ $params['hideFolders'] = '0';
 }
 // run Ditto
 $list = $modx->runSnippet('Ditto', $params);
-$ListOutput = '<div class="'.$ListBoxWidth.'"> <div class="widget-wrapper"> <div class="widget-title sectionHeader"><i class="fa fa-pencil"></i> '.$ListBoxTitle.'</div>
-<div class="widget-stage sectionBody overflowscroll"><ul>'.$list.'</ul><br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div></div>';
-}
+$ListOutput = '<div class="'.$ListBoxWidth.'"><div class="widget-wrapper"><div class="widget-title sectionHeader"><i class="fa fa-pencil"></i> '.$ListBoxTitle.'</div>
+<div class="widget-stage sectionBody overflowscroll"><table class="table table-hover table-condensed">'.$list.'</table><br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div></div>';
 }
 //end list
 $output .= $cssOutput.$SocialOutput.$ListOutput.$LinksOutput;
