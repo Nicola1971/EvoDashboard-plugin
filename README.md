@@ -10,13 +10,14 @@ The most important difference between **OnManagerWelcomeCustom** and **EvoDashbo
 
 # Upgrades
 
-## 2.5 RC
+## 2.0.5 RC
 
-Document list widget restyled in boostrap tables
+* Document list widget restyled in boostrap tables
+* various bugs fix
 
 ## 2.0 RC
 
-Complete code refactoring in Boostrap 3!!
+* Complete code refactoring in Boostrap 3!!
 
 ## 1.2 pl
 
