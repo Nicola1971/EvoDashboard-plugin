@@ -18,7 +18,7 @@
                 [+OnManagerWelcomePrerender+]
 
       <!--widget -->
-      <div class="col-sm-12">
+      <div class="[+LogoBoxWidth+]" style="display:[+logobox_display+]">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader">
             <i class="fa fa-home"></i> [+welcome_title+]
@@ -38,14 +38,13 @@
                     <!-- row -->
    <div class="row">
      [+OnManagerWelcomeHome+]
-[+OnManagerWelcomeRender+]
    </div>
 
                    <!-- end row -->
 
 <div class="row">
 
-      <div class="col-sm-6">
+      <div class="[+UserInfoWidth+]" style="display:[+userinfo_display+]">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader">
            <i class="fa fa-info-circle"></i> Info
@@ -56,7 +55,7 @@
          </div>
       </div>
 
-     <div class="col-sm-6">
+     <div class="[+MessageInfoWidth+]" style="display:[+messageinfo_display+]">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader">
            <i class="fa fa-inbox"></i> Inbox
@@ -72,7 +71,7 @@
 
 <div class="row">
 
-      <div class="col-sm-6">
+      <div class="[+ModxNewsWidth+]" style="display:[+modxnews_display+]">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader">
             <i class="fa fa-rss"></i> [+modx_news_title+]
@@ -82,7 +81,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
+      <div class="[+ModxSecurityNewsWidth+]" style="display:[+modxsecuritynews_display+]">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader">
             <i class="fa fa-exclamation-triangle"></i> [+modx_security_notices_title+]
@@ -97,7 +96,7 @@
 
 <div class="row">
 
-      <div class="col-sm-6">
+      <div class="[+RecentInfoWidth+]" style="display:[+recentinfo_display+]">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader">
            <i class="fa fa-pencil-square-o"></i> [+activity_title+]
@@ -107,7 +106,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
+      <div class="[+OnlineInfoWidth+]" style="display:[+onlineinfo_display+]">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader table-striped">
           [+onlineusers_title+]
@@ -119,6 +118,12 @@
       </div>
 
 </div>
+                    <!-- row -->
+   <div class="row">
+[+OnManagerWelcomeRender+]
+   </div>
+
+                   <!-- end row -->
     <hr>
 
 
