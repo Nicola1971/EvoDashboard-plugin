@@ -1,10 +1,10 @@
 <?php
-/* EvoDashboard 1.1 pl
+/* EvoDashboard 2.0.4 pl
 Instructions:
 System event:
 OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
 Configuration:
-&PluginDashboard= Default Dashboard:;list;yes,no;yes &PluginStyles= Load Plugin dashboard styles:;list;no,yes;yes &CustomLogo= Enable Custom Logo:;list;yes,no;yes &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &SocialBox= Enable Social Box:;list;yes,no;yes &SocialBoxSize= Social Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &SocialBoxEvoEvent= Social Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomePrerender &SocialTitle= Social box title:;string;Social &SocialChunk= Social box chunk:;string;Welcome_SocialLinks &LinksBox= Enable Links Box:;list;yes,no;yes &LinksBoxEvoEvent= Links Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &LinksBoxSize= Links Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &CustomLinksTitle= Links box title:;string;Links &CustomLinksChunk= Links box chunk:;string;Welcome_CustomLinks &ListBox= Enable List documents:;list;yes,no;yes &ListBoxEvoEvent= List Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &ListBoxSize= List Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &ListMode= List Box mode:;list;basic,advanced;basic &ListBoxTitle=Edit List documents Title:;string;Latest Blog Entries &ParentFolder=Parent folder for List documents:;string;2 &ListItems=Max items in List:;string;20 &hideFolders= Hide Folders from List:;list;yes,no;no &dittolevel= Depht:;string;1
+&CustomLogo= Enable Custom Logo:;list;yes,no;yes &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &SocialBox= Enable Social Box:;list;yes,no;yes &SocialBoxSize= Social Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &SocialBoxEvoEvent= Social Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomePrerender &SocialTitle= Social box title:;string;Social &SocialChunk= Social box chunk:;string;Welcome_SocialLinks &LinksBox= Enable Links Box:;list;yes,no;yes &LinksBoxEvoEvent= Links Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &LinksBoxSize= Links Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &CustomLinksTitle= Links box title:;string;Links &CustomLinksChunk= Links box chunk:;string;Welcome_CustomLinks &ListBox= Enable List documents:;list;yes,no;yes &ListBoxEvoEvent= List Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &ListBoxSize= List Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &ListMode= List Box mode:;list;basic,advanced;basic &ListBoxTitle=Edit List documents Title:;string;Latest Blog Entries &ParentFolder=Parent folder for List documents:;string;2 &ListItems=Max items in List:;string;20 &hideFolders= Hide Folders from List:;list;yes,no;no &dittolevel= Depht:;string;1
 
 */
 
@@ -48,17 +48,15 @@ $ListBoxWidth = 'col-sm-6';
 $output = "";
 $e = &$modx->Event;
 /* home switch home */
-if ($PluginDashboard == yes) {
+
 		if($e->name == 'OnManagerPageInit') {
 		$modx->config['manager_welcome_tpl'] = '@FILE: '.$WelcomeUrl.'';
     }
-	if ($PluginStyles == yes) {
+
 		if($e->name == 'OnManagerMainFrameHeaderHTMLBlock') {
 		$cssOutput = '<link type="text/css" rel="stylesheet" href="'.$StylesUrl.'">';
     }
-}
 
-}
 /*Custom logo */
 
 //logo

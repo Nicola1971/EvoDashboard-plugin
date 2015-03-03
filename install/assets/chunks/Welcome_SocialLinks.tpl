@@ -14,7 +14,7 @@
 <div class="wm_button"><a href="../" target="_blank"><i class="icon-color-red icon-no-border fa fa-google-plus-square fa-3x"></i><br />Google+</a></div>
 <div class="wm_button"><a href="../" target="_blank"><i class="icon-color-sea icon-no-border fa fa-linkedin-square fa-3x"></i><br />Linkedin</a></div>
 <div class="wm_button"><a href="../" target="_blank"><i class="icon-color-blue icon-no-border fa fa-twitter-square fa-3x"></i><br />Twitter</a></div>
-<div class="wm_button"><a href="../" target="_blank"><i class="icon-color-sea icon-no-border fa fa-youtube-square fa-3x"></i><br />Youtube</a></div>
+<div class="wm_button"><a href="../" target="_blank"><i class="icon-color-red icon-no-border fa fa-youtube-square fa-3x"></i><br />Youtube</a></div>
 <div class="wm_button"><a href="../" target="_blank"><i class="icon-color-dark icon-no-border fa fa-github fa-3x"></i><br />Github</a></div>
 <div class="wm_button"><a href="../" target="_blank"><i class="icon-color-blue icon-no-border fa fa-dropbox fa-3x"></i><br />Dropbox</a></div>
 
