@@ -3,7 +3,7 @@
 WelcomeSocialBox 2.0 RC
 OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender
 
-&SocialBoxEvoEvent= Social Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomePrerender &SocialBoxSize= Social Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &SocialTitle= Social box title:;string;Social &SocialChunk= Social box chunk:;string;Welcome_SocialLinks
+&SocialBoxEvoEvent= Social Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomePrerender &SocialBoxSize= Social Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &SocialTitle= Social box title:;string;Social &SocialChunk= Social box chunk:;string;Welcome_SocialLinks
 ****
 */
 //blocks
