@@ -1,4 +1,4 @@
-EvoDashboard-plugin 2.0.5
+EvoDashboard-plugin 2.1
 ===================
 Info and docs: http://www.tattoocms.it/extras/plugins/evodashboard-plugin-modx-evolution-dashboard.html
 
@@ -10,12 +10,19 @@ The most important difference between **OnManagerWelcomeCustom** and **EvoDashbo
 
 # Upgrades
 
-## 2.0.5 RC
+## 2.1 PL
+
+* Now you can Show/hide and change widget size (half/full) to default MODX Welcome Boxes!
+* Document list, Social Box, Links Box and List Box widget are now ***external widgets plugins*** (still installed together with EvoDashboard, for backward compatibility)
+* Repositioned events in the welcome page
+
+
+## 2.0.5 PL
 
 * Document list widget restyled in boostrap tables
 * various bugs fix
 
-## 2.0 RC
+## 2.0 PL
 
 * Complete code refactoring in Boostrap 3!!
 
