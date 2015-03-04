@@ -12,7 +12,7 @@ The most important difference between **OnManagerWelcomeCustom** and **EvoDashbo
 
 ## 2.1 PL
 
-* Now you can Show/hide and change widget size (half/full) to default MODX Welcome Boxes!
+* Now you can Show/hide and change widget size (half/full) of default MODX Welcome Boxes!
 * Document list, Social Box, Links Box and List Box widget are now ***external widgets plugins*** (still installed together with EvoDashboard, for backward compatibility)
 * Repositioned events in the welcome page
 
