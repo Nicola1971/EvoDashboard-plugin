@@ -109,7 +109,7 @@
       <div class="[+OnlineInfoWidth+]" style="display:[+onlineinfo_display+]">
         <div class="widget-wrapper">
           <div class="widget-title sectionHeader table-striped">
-          [+onlineusers_title+]
+           <i class="fa fa-users"></i> [+onlineusers_title+]
           </div>
           <div class="widget-stage sectionBody">
            	[+OnlineInfo+]
