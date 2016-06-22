@@ -1,9 +1,6 @@
 <?php
 /******
 WelcomeSocialBox 3.0 RC
-OnManagerWelcomeHomer
-
-&WidgetTitle= Widget title:;string;Social &WidgetChunk= Widget chunk:;string;Welcome_SocialLinks &datarow= widget row position:;list;1,2,3,4,5,6,7,8,9,10;1 &datacol= widget col position:;list;1,2;1 &datasizex= widget x size:;list;1,2;1 &datasizey= widget y size:;list;1,2,3,4,5,6,7,8,9,10;2 
 ****
 */
 //widget name
@@ -11,7 +8,7 @@ $WidgetID = isset($WidgetID) ? $WidgetID : 'SocialBox';
 // size and position
 $datarow = isset($datarow) ? $datarow : '1';
 $datacol = isset($datacol) ? $datacol : '1';
-$datasizex = isset($datasizex) ? $datasizex : '1';
+$datasizex = isset($datasizex) ? $datasizex : '2';
 $datasizey = isset($datasizey) ? $datasizey : '2';
 //output
 $WidgetOutput = isset($WidgetOutput) ? $WidgetOutput : '';

@@ -1,7 +1,7 @@
 // credits: https://github.com/mirceamarcu/gridster-responsive
 
 
-function fnCreateGridster(page, colors, states, titles){
+function fnCreateGridster(page, states){
 	/* load saved position and sizes */
 	if(localdata_position){
 		$.each(localdata_position, function(i,value){

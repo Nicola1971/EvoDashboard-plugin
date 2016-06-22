@@ -2,9 +2,9 @@
 /* EvoDashboard 3.0 pl
 Instructions:
 System event:
-OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
+OnManagerWelcomeHome,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
 Configuration:
-&CustomLogo= Enable Custom Logo:;list;yes,no;yes &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &logobox_showhide= Show Logo Box:;list;show,hide;hide &userinfo_showhide= Show User Info Box:;list;show,hide;show &messageinfo_showhide= Show Message Info Box:;list;show,hide;show &modxnews_showhide= Show ModxNews Box:;list;show,hide;show &modxsecuritynews_showhide= Show SecurityNews Box:;list;show,hide;show &recentinfo_showhide= Show Recent Info Box:;list;show,hide;show &onlineinfo_showhide= Show Online Info Box:;list;show,hide;show
+&logobox_showhide=Show Logo Widget:;list;show,hide;show &ShowLogo=Show MODX Logo:;list;show,hide;show &CustomLogo=Show Custom Logo:;list;show,hide;hide &LogoChunk=Logo Chunk:;string;Welcome_YourLogo &userinfo_showhide=Show User Info Widget:;list;show,hide;show &messageinfo_showhide=Show Message Info Widget:;list;show,hide;show &modxnews_showhide=Show ModxNews Widget:;list;show,hide;show &modxsecuritynews_showhide=Show SecurityNews Widget:;list;show,hide;show &recentinfo_showhide=Show Recent Info Widget:;list;show,hide;show &onlineinfo_showhide=Show Online Info Widget:;list;show,hide;show
 */
 
 /* home switch home */
@@ -96,11 +96,20 @@ $modx->setPlaceholder('onlineinfo_display', $onlineinfo_display);
 
 //logo
 
-if ($CustomLogo == yes) {
+if ($CustomLogo == 'show') {
 $LogoOutput = $modx->getChunk(''.$LogoChunk.'');
+$LogoButton = '<span class="wm_button white" style="border:0">'.$LogoOutput.'</span>';
 }
-$modx->setPlaceholder('Logo', $LogoOutput);
-//}
+else {
+if ($ShowLogo == 'show') {
+$LogoButton = ' <span class="wm_button white" style="border:0"><img src="media/style/' . $modx->config['manager_theme'] . '/images/misc/logo.png" alt="[+logo_slogan+]" /></span>';
+}
+else {
+$LogoButton = '';    
+}
+}
+$modx->setPlaceholder('Logo', $LogoButton);
+
 //end logo
 
 $output = $cssOutput;

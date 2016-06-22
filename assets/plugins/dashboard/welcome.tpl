@@ -8,7 +8,7 @@
       <!-- title-->
 
      <div class="col-sm-12">
-    <h1>[+site_name+]</h1>
+    <h1>[+site_name+] / Dashboard</h1>
      </div>
      <!-- alert -->
      <div class="container col-sm-12" style="display:[+config_display+]">
@@ -39,12 +39,13 @@
 
 					  </div>
 					  <div class="panel-body widget-stage sectionBody">
-	             <span class="wm_button white" style="border:0">[+Logo+]</span>
-                        <span class="btn btn-danger">[+SecurityIcon+]</span>
+	             [+Logo+]
+                    <span class="btn btn-danger">[+SecurityIcon+]</span>
                         <span class="btn btn-primary">[+WebUserIcon+]</span>
                         <span class="btn btn-success">[+ModulesIcon+]</span>
                         <span class="btn btn-info">[+ResourcesIcon+]</span>
                         <span class="btn btn-warning">[+BackupIcon+]</span>
+                       
 					  </div>
 					</div>			
 				</li>
