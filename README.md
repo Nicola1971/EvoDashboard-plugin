@@ -13,7 +13,7 @@ The most important difference between **OnManagerWelcomeCustom** and **EvoDashbo
 ## 3.0 PL
 
 * New grid based on gridster.js
-* New Widgtet resizable, draggable and collapsible
+* New Widgets resizable, draggable and collapsible
 * Widget position, state and size stored in localstorage
 
 ## 2.1 PL
