@@ -465,3 +465,5 @@ i.icon-bg-light-grey {
 
 .btn-group a:link {text-decoration:none; text-weight: normal;}
 
+.btn-group .panel-hide {margin-top:-5px;
+}
