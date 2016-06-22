@@ -1,46 +1,33 @@
 <?php
 /******
-WelcomeSocialBox 3.0 RC
+WelcomeSocialBox 2.0 RC
+OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender
+
+&SocialBoxEvoEvent= Social Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomePrerender &SocialBoxSize= Social Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &SocialTitle= Social box title:;string;Social &SocialChunk= Social box chunk:;string;Welcome_SocialLinks
 ****
 */
-//widget name
-$WidgetID = isset($WidgetID) ? $WidgetID : 'SocialBox';
-// size and position
-$datarow = isset($datarow) ? $datarow : '1';
-$datacol = isset($datacol) ? $datacol : '1';
-$datasizex = isset($datasizex) ? $datasizex : '2';
-$datasizey = isset($datasizey) ? $datasizey : '2';
-//output
-$WidgetOutput = isset($WidgetOutput) ? $WidgetOutput : '';
+//blocks
+$SocialOutput = isset($SocialOutput) ? $SocialOutput : '';
 //events
-$EvoEvent = isset($EvoEvent) ? $EvoEvent : 'OnManagerWelcomeHome';
+$SocialBoxEvoEvent = isset($SocialBoxEvoEvent) ? $SocialBoxEvoEvent : 'OnManagerWelcomeRender';
+// box size
+$SocialBoxSize = isset($SocialBoxSize) ? $SocialBoxSize : 'dashboard-block-full';
+//widget grid size
+if ($SocialBoxSize == 'dashboard-block-full') {
+$SocialBoxWidth = 'col-sm-12';
+} else {
+$SocialBoxWidth = 'col-sm-6';
+};
 $output = "";
 $e = &$modx->Event;
 
-/*Widget Box */
-if($e->name == ''.$EvoEvent.'') {
-$WidgetOutput = '
-<li id="'.$WidgetID.'" data-row="'.$datarow.'" data-col="'.$datacol.'" data-sizex="'.$datasizex.'" data-sizey="'.$datasizey.'">
-                    <div class="panel panel-default widget-wrapper">
-                      <div class="panel-headingx widget-title sectionHeader clearfix">
-                          <span class="pull-left"><i class="fa fa-pencil"></i> '.$WidgetTitle.'</span>
-                            <div class="widget-controls pull-right">
-                                <div class="btn-group">
-                                    <a href="#" class="btn btn-default btn-xs panel-hide hide-full glyphicon glyphicon-minus" data-id="'.$WidgetID.'"></a>
-                                </div>     
-                            </div>
-
-                      </div>
-                      <div class="panel-body widget-stage sectionBody">
-                       '.$modx->getChunk(''.$WidgetChunk.'').' 
-                      </div>
-                    </div>           
-                </li>
-
-';
+/*Social Box */
+if($e->name == ''.$SocialBoxEvoEvent.'') {
+$SocialOutput = '<div class="'.$SocialBoxWidth.'"><div class="widget-wrapper"> <div class="widget-title sectionHeader"><i class="fa fa-globe"></i> '.$SocialTitle.'</div>
+<div class="widget-stage sectionBody">'.$modx->getChunk(''.$SocialChunk.'').' <br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div></div>';
 }
-//end widget
-$output = $WidgetOutput;
+//end social
+$output = $SocialOutput;
 $e->output($output);
 return;
 ?>

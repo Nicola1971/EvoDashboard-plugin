@@ -9,7 +9,6 @@
  * @internal    @modx_category Dashboard
  * @internal    @installset base, sample
  */
-<!--example boostrap buttons url-->
 <a href="../" target="_blank"><button class="btn btn-default" type="button"><i class="fa fa-eye"></i> Preview</button></a>
 <a href="index.php?a=4"><button class="btn btn-info" type="button"><i class="fa fa-file"></i> New doc</button></a>
 <a href="index.php?a=72"><button class="btn btn-warning" type="button"><i class="fa fa-link"></i> New Link</button></a>

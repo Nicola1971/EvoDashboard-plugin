@@ -6,20 +6,20 @@
  *
  * @author    Nicola Lambathakis
  * @category    plugin
- * @version    3.0 pl
+ * @version    2.1 pl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
- * @internal    @events OnManagerWelcomeHome,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
+ * @internal    @events OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
  * @internal    @installset base
  * @internal    @modx_category Dashboard
- * @internal    @properties  &logobox_showhide=Show Logo Widget:;list;show,hide;show &ShowLogo=Show MODX Logo:;list;show,hide;show &CustomLogo=Show Custom Logo:;list;show,hide;hide &LogoChunk=Logo Chunk:;string;Welcome_YourLogo &userinfo_showhide=Show User Info Widget:;list;show,hide;show &messageinfo_showhide=Show Message Info Widget:;list;show,hide;show &modxnews_showhide=Show ModxNews Widget:;list;show,hide;show &modxsecuritynews_showhide=Show SecurityNews Widget:;list;show,hide;show &recentinfo_showhide=Show Recent Info Widget:;list;show,hide;show &onlineinfo_showhide=Show Online Info Widget:;list;show,hide;show
+ * @internal    @properties  &CustomLogo= Enable Custom Logo:;list;yes,no;yes &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &LogoBoxSize= Logo Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &logobox_showhide= Show Logo Box:;list;show,hide;show &UserInfoSize= User Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &userinfo_showhide= Show User Info Box:;list;show,hide;show &MessageInfoSize= Message Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &messageinfo_showhide= Show Message Info Box:;list;show,hide;show &ModxNewsSize= Modx News Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &modxnews_showhide= Show ModxNews Box:;list;show,hide;show &ModxSecurityNewsSize= Security News Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &modxsecuritynews_showhide= Show SecurityNews Box:;list;show,hide;show &RecentInfoSize= Recent Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &recentinfo_showhide= Show Recent Info Box:;list;show,hide;show &OnlineInfoSize= Online Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &onlineinfo_showhide= Show Online Info Box:;list;show,hide;show
 */
 
-/* EvoDashboard 3.0 pl
+/* EvoDashboard 2.0.4 pl
 Instructions:
 check event:
-OnManagerWelcomeHome,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
+OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
 
-&logobox_showhide=Show Logo Widget:;list;show,hide;show &ShowLogo=Show MODX Logo:;list;show,hide;show &CustomLogo=Show Custom Logo:;list;show,hide;hide &LogoChunk=Logo Chunk:;string;Welcome_YourLogo &userinfo_showhide=Show User Info Widget:;list;show,hide;show &messageinfo_showhide=Show Message Info Widget:;list;show,hide;show &modxnews_showhide=Show ModxNews Widget:;list;show,hide;show &modxsecuritynews_showhide=Show SecurityNews Widget:;list;show,hide;show &recentinfo_showhide=Show Recent Info Widget:;list;show,hide;show &onlineinfo_showhide=Show Online Info Widget:;list;show,hide;show
+&CustomLogo= Enable Custom Logo:;list;yes,no;yes &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &LogoBoxSize= Logo Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &logobox_showhide= Show Logo Box:;list;show,hide;show &UserInfoSize= User Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &userinfo_showhide= Show User Info Box:;list;show,hide;show &MessageInfoSize= Message Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &messageinfo_showhide= Show Message Info Box:;list;show,hide;show &ModxNewsSize= Modx News Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &modxnews_showhide= Show ModxNews Box:;list;show,hide;show &ModxSecurityNewsSize= Security News Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &modxsecuritynews_showhide= Show SecurityNews Box:;list;show,hide;show &RecentInfoSize= Recent Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &recentinfo_showhide= Show Recent Info Box:;list;show,hide;show &OnlineInfoSize= Online Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &onlineinfo_showhide= Show Online Info Box:;list;show,hide;show
 
 */
 // Run the main code
