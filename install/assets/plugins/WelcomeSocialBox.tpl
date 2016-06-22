@@ -6,19 +6,20 @@
  *
  * @author    Nicola Lambathakis
  * @category    plugin
- * @version    2.0 PL
+ * @version    3.0 PL
  * @license	 http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
- * @internal    @events OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender
+ * @internal    @events OnManagerWelcomeHome
  * @internal    @installset base
+ * @internal    @disabled 1
  * @internal    @modx_category Dashboard
- * @internal    @properties  &SocialBoxEvoEvent= Social Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomePrerender &SocialBoxSize= Social Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &SocialTitle= Social box title:;string;Social &SocialChunk= Social box chunk:;string;Welcome_SocialLinks
+ * @internal    @properties  &WidgetTitle= Widget title:;string;Social &WidgetChunk= Widget chunk:;string;Welcome_SocialLinks &datarow= widget row position:;list;1,2,3,4,5,6,7,8,9,10;1 &datacol= widget col position:;list;1,2,3,4;1 &datasizex= widget x size:;list;1,2,3,4;2 &datasizey= widget y size:;list;1,2,3,4,5,6,7,8,9,10;2
  */
 
 /******
-WelcomeSocialBox 2.0 RC
-OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender
+WelcomeSocialBox 3.0 RC
+OnManagerWelcomeHomeer
 
-&SocialBoxEvoEvent= Social Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomePrerender &SocialTitle= Social box title:;string;Social &SocialChunk= Social box chunk:;string;Welcome_SocialLinks
+&WidgetTitle= Widget title:;string;Social &WidgetChunk= Widget chunk:;string;Welcome_SocialLinks &datarow= widget row position:;list;1,2,3,4,5,6,7,8,9,10;1 &datacol= widget col position:;list;1,2,3,4;1 &datasizex= widget x size:;list;1,2,3,4;2 &datasizey= widget y size:;list;1,2,3,4,5,6,7,8,9,10;2
 ****
 */
 // Run the main code

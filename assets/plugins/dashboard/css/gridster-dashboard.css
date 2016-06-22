@@ -4,7 +4,7 @@
     list-style: none;
 }
 .gridster{ display: none}
-.gridster .panel-headingx{ min-height: 34px; overflow:hidden}
+.gridster .panel-headingx{ min-height: 32px; overflow:hidden}
 .gridster .panel-body.widget-stage.sectionBody {
 	height:inherit;
 	overflow-y: auto;
