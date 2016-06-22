@@ -8,6 +8,7 @@
       <!-- title-->
 
      <div class="col-sm-12">
+     [+OnManagerWelcomePrerender+]
     <h1>[+site_name+] / Dashboard</h1>
      </div>
      <!-- alert -->
@@ -17,7 +18,7 @@
           </div>
     </div>
  </div>
-[+OnManagerWelcomePrerender+]
+
        <!-- end  title -->
 <div class="container-fluid dashboard">
        <div class="col-sm-12">
@@ -25,6 +26,7 @@
                 <div class="gridster margin-bottom-30">
                   
                      <ul>
+                    [+OnManagerWelcomeHome+]
                   <!---Welcome Logo and buttons---> 
                   <!--- panel -->
                   				<li id="modxwelcome_widget" data-row="1" data-col="1" data-sizex="3" data-sizey="3" style="display:[+logobox_display+]">
@@ -52,7 +54,7 @@
                   <!--- /panel --->
                           
    
-                     [+OnManagerWelcomeHome+]
+                   
                    <!---Messages--->
                     <!--- panel --->
                    <li id="modxinbox_widget" data-row="1" data-col="2" data-sizex="1" data-sizey="3" style="display:[+messageinfo_display+]">
@@ -172,12 +174,11 @@
 				</li>
                  <!--- /panel --->
                                   
-               [+OnManagerWelcomeRender+]     
                 </div>
                 <!-- / GridStack widgets -->
  </div>
 <div class="container-fluid dashboard">
-
+ [+OnManagerWelcomeRender+] 
       <!-- row title-->
     <div class="row">
      <div class="container col-sm-12 margin-bottom-30">
@@ -194,10 +195,10 @@ EvoDashboard 3.0
 		<script type="text/javascript">
 			//localStorage.clear();
 
-			var localdata_position = JSON.parse(localStorage.getItem('evodashboard.grid'));
-			var localdata_states = JSON.parse(localStorage.getItem('evodashboard.states'));
+			var localdata_position = JSON.parse(localStorage.getItem('[+site_name+]-evodashboard.grid'));
+			var localdata_states = JSON.parse(localStorage.getItem('[+site_name+]-evodashboard.states'));
 
 
-			fnCreateGridster('evodashboard.grid', 'evodashboard.states');
+			fnCreateGridster('[+site_name+]-evodashboard.grid', '[+site_name+]-evodashboard.states');
 		</script>
  
