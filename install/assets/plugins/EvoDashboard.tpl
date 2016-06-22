@@ -6,20 +6,20 @@
  *
  * @author    Nicola Lambathakis
  * @category    plugin
- * @version    2.1 pl
+ * @version    3.0 pl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  * @internal    @events OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
  * @internal    @installset base
  * @internal    @modx_category Dashboard
- * @internal    @properties  &CustomLogo= Enable Custom Logo:;list;yes,no;yes &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &LogoBoxSize= Logo Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &logobox_showhide= Show Logo Box:;list;show,hide;show &UserInfoSize= User Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &userinfo_showhide= Show User Info Box:;list;show,hide;show &MessageInfoSize= Message Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &messageinfo_showhide= Show Message Info Box:;list;show,hide;show &ModxNewsSize= Modx News Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &modxnews_showhide= Show ModxNews Box:;list;show,hide;show &ModxSecurityNewsSize= Security News Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &modxsecuritynews_showhide= Show SecurityNews Box:;list;show,hide;show &RecentInfoSize= Recent Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &recentinfo_showhide= Show Recent Info Box:;list;show,hide;show &OnlineInfoSize= Online Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &onlineinfo_showhide= Show Online Info Box:;list;show,hide;show
+ * @internal    @properties  &CustomLogo= Enable Custom Logo:;list;yes,no;no &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &logobox_showhide= Show Logo Box:;list;show,hide;show &userinfo_showhide= Show User Info Box:;list;show,hide;show &messageinfo_showhide= Show Message Info Box:;list;show,hide;show &modxnews_showhide= Show ModxNews Box:;list;show,hide;show &modxsecuritynews_showhide= Show SecurityNews Box:;list;show,hide;show &recentinfo_showhide= Show Recent Info Box:;list;show,hide;show &onlineinfo_showhide= Show Online Info Box:;list;show,hide;show
 */
 
-/* EvoDashboard 2.0.4 pl
+/* EvoDashboard 3.0 pl
 Instructions:
 check event:
 OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerPageInit,OnManagerMainFrameHeaderHTMLBlock
 
-&CustomLogo= Enable Custom Logo:;list;yes,no;yes &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &LogoBoxSize= Logo Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-full &logobox_showhide= Show Logo Box:;list;show,hide;show &UserInfoSize= User Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &userinfo_showhide= Show User Info Box:;list;show,hide;show &MessageInfoSize= Message Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &messageinfo_showhide= Show Message Info Box:;list;show,hide;show &ModxNewsSize= Modx News Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &modxnews_showhide= Show ModxNews Box:;list;show,hide;show &ModxSecurityNewsSize= Security News Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &modxsecuritynews_showhide= Show SecurityNews Box:;list;show,hide;show &RecentInfoSize= Recent Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &recentinfo_showhide= Show Recent Info Box:;list;show,hide;show &OnlineInfoSize= Online Info Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &onlineinfo_showhide= Show Online Info Box:;list;show,hide;show
+&CustomLogo= Enable Custom Logo:;list;yes,no;no &LogoChunk= Logo Chunk:;string;Welcome_YourLogo &logobox_showhide= Show Logo Box:;list;show,hide;show &userinfo_showhide= Show User Info Box:;list;show,hide;show &messageinfo_showhide= Show Message Info Box:;list;show,hide;show &modxnews_showhide= Show ModxNews Box:;list;show,hide;show &modxsecuritynews_showhide= Show SecurityNews Box:;list;show,hide;show &recentinfo_showhide= Show Recent Info Box:;list;show,hide;show &onlineinfo_showhide= Show Online Info Box:;list;show,hide;show
 
 */
 // Run the main code
