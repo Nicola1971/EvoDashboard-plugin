@@ -10,6 +10,12 @@ The most important difference between **OnManagerWelcomeCustom** and **EvoDashbo
 
 # Upgrades
 
+## 3.0 PL
+
+* New grid based on gridster.js
+* New Widgtet resizable, draggable and collapsible
+* Widget position, state and size stored in localstorage
+
 ## 2.1 PL
 
 * Now you can Show/hide and change widget size (half/full) of default MODX Welcome Boxes!
