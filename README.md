@@ -1,4 +1,4 @@
-EvoDashboard-plugin 2.1
+EvoDashboard-plugin 3.0
 ===================
 Info and docs: http://www.tattoocms.it/extras/plugins/evodashboard-plugin-modx-evolution-dashboard.html
 
