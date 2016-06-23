@@ -182,10 +182,15 @@
       <!-- row title-->
     <div class="row">
      <div class="container col-sm-12 margin-bottom-30">
+ 
      <p class=" text-muted pull-right">
-EvoDashboard 3.0   
+<a class="btn btn-sm btn-default" onclick="cleanLocalStorage('[+site_name+]-evodashboard.grid,[+site_name+]-evodashboard.states')"><i class="fa fa-refresh" aria-hidden="true"></i> Reset Grid</a>
+</p>
+     <p class=" text-muted pull-left">
+EvoDashboard 3.0
 </p>
  </div>
+  </div>
     </div>
 
 <script src="../assets/plugins/dashboard/plugins/jquery-2.1.4.min.js"></script>
@@ -201,4 +206,12 @@ EvoDashboard 3.0
 
 			fnCreateGridster('[+site_name+]-evodashboard.grid', '[+site_name+]-evodashboard.states');
 		</script>
- 
+        
+		<script type="text/javascript">        
+        function cleanLocalStorage() {
+    for(key in localStorage) {
+        delete localStorage[key];
+    }
+    location.reload();
+}
+ </script>
