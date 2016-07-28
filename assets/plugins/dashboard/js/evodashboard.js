@@ -11,7 +11,7 @@ function fnCreateGridster(page, states){
 	
 
 	/* force 1 column on mobile screen sizes */
-	if ($( window ).width() <= 480 || $( window ).width() == 640 ){
+	if ($( window ).width() <= 480 || $( window ).width() == 840 ){
 		var cols=1;
 		var offset=60;
 	} else {
@@ -63,7 +63,7 @@ function fnCreateGridster(page, states){
     }).data('gridster');
 
 
-	/* load states (after colors) */
+	/* load states */
 	if(localdata_states){
 		$.each(localdata_states, function(i,value){
 			if(value){
@@ -89,35 +89,6 @@ function fnCreateGridster(page, states){
 		}
 		_state_update(panel, _state);
 
-	});
-
-	/* register the maximize button */
-	$(document).on("click", ".panel-max", function(e) {
-		e.preventDefault();    
-		var panel = $(this).attr("data-id");
-		if($(this).hasClass('glyphicon-resize-small')){
-
-			$('.main-nav').show();
-			$('#'+panel).find('.hide-full').show();
-			$('#'+panel +' .gs-resize-handle').hide();
-			$('#'+panel).css({'position':'absolute', 'top':$('#'+panel).attr('data-top'), 'left':$('#'+panel).attr('data-left'),'width':$('#'+panel).attr('data-width'), 'height':$('#'+panel).attr('data-height'), 'z-index':'0'});
-			$(this).removeClass('glyphicon-resize-small').addClass('glyphicon-resize-full');
-
-		} else {
-			$('.main-nav').hide();
-			var _position=$('#'+panel).position();
-			$('#'+panel).attr({
-				'data-width': $('#'+panel).width(), 
-				'data-height':$('#'+panel).height(),
-				'data-left':_position.left,
-				'data-top':_position.top
-			});
-			$('#'+panel).css({'position':'fixed', 'top':'0', 'left':'0','width':'100%', 'height':'100%', 'z-index':'9999'});
-
-			$(this).removeClass('glyphicon-resize-full').addClass('glyphicon-resize-small');
-			$('#'+panel +' .gs-resize-handle').show();
-			$('#'+panel).find('.hide-full').hide();
-		}
 	});
 
 	/* helpers */
