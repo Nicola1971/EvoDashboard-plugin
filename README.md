@@ -4,7 +4,6 @@ Info and docs: http://www.tattoocms.it/extras/plugins/evodashboard-plugin-modx-e
 
 EvoDashboard is a modern, customizable, responsive, Boostrap Welcome Dashboard for MODx Evolution with widget support.
 
-The most important difference between **OnManagerWelcomeCustom** and **EvoDashboard** is that EvoDashboard works with all MODX Evolution manager themes !
 
 ![evodashboard](https://raw.githubusercontent.com/Nicola1971/training-materials/master/Images/evodashboard.jpg)
 
