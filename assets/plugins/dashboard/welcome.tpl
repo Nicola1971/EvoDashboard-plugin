@@ -41,12 +41,16 @@
 
 					  </div>
 					  <div class="panel-body widget-stage sectionBody">
-	             [+Logo+]
-                    <span class="btn btn-danger">[+SecurityIcon+]</span>
-                        <span class="btn btn-primary">[+WebUserIcon+]</span>
-                        <span class="btn btn-success">[+ModulesIcon+]</span>
-                        <span class="btn btn-info">[+ResourcesIcon+]</span>
-                        <span class="btn btn-warning">[+BackupIcon+]</span>
+                                  <div class="wm_logo">
+                 [+Logo+]
+              </div>
+	            
+                       <div class="wm_button red" style="border:0">[+SecurityIcon+]</div>
+                        <div class="wm_button green" style="border:0">[+WebUserIcon+]</div>
+                        <div class="wm_button azure" style="border:0">[+ModulesIcon+]</div>
+                        <div class="wm_button yellow" style="border:0">[+ResourcesIcon+]</div>
+                        <div class="wm_button violet" style="border:0">[+BackupIcon+]</div>
+                        <div class="wm_button orange" style="border:0">[+HelpIcon+]</div>
                        
 					  </div>
 					</div>			
