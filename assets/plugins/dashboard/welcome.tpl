@@ -50,7 +50,7 @@
                         <div class="wm_button azure" style="border:0">[+ModulesIcon+]</div>
                         <div class="wm_button yellow" style="border:0">[+ResourcesIcon+]</div>
                         <div class="wm_button violet" style="border:0">[+BackupIcon+]</div>
-                        <div class="wm_button orange" style="border:0">[+HelpIcon+]</div>
+                       <!--- <div class="wm_button orange" style="border:0">[+HelpIcon+]</div>---> 
                        
 					  </div>
 					</div>			
