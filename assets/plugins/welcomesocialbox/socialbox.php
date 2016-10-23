@@ -26,7 +26,7 @@ $WidgetOutput = '
                           <span class="pull-left"><i class="fa fa-pencil"></i> '.$WidgetTitle.'</span>
                             <div class="widget-controls pull-right">
                                 <div class="btn-group">
-                                    <a href="#" class="btn btn-default btn-xs panel-hide hide-full glyphicon glyphicon-minus" data-id="'.$WidgetID.'"></a>
+                                    <a href="#" class="btn btn-default btn-xs panel-hide hide-full fa fa-minus" data-id="'.$WidgetID.'"></a>
                                 </div>     
                             </div>
 
