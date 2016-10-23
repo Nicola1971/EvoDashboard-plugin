@@ -93,7 +93,7 @@ $onlineusers_title = $modx->getPlaceholder('onlineusers_title');
 $OnlineInfo = $modx->getPlaceholder('OnlineInfo');
 
 if ($onlineinfo_showhide == 'hide') {
-$onlineinfo_display = 'none';
+$onlineinfo_display = '';
 } else {
 $onlineinfo_display = '<!---User Info--->
       <!--- panel --->
