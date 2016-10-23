@@ -38,8 +38,10 @@
     <p class="text-muted pull-right">
       <a class="btn btn-sm btn-default" onclick="cleanLocalStorage('[+site_name+]-evodashboard.grid,[+site_name+]-evodashboard.states')"><i class="fa fa-refresh" aria-hidden="true"></i> [+resetgrid+]</a>
     </p>
+           <p class=" text-muted pull-left">
+EvoDashboard 3.1
+</p>
   </div>
-
 </div>
 
 <script src="media/script/jquery/jquery.min.js"></script>
