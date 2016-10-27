@@ -8,7 +8,7 @@ function fnCreateGridster(page, states){
 	
 
 	/* force 1 column on mobile screen sizes */
-	if ($( window ).width() <= 480 || $( window ).width() == 840 ){
+	if ($( window ).width() <= 480){
 		var cols=1;
 		var offset=60;
 	} else {
