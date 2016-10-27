@@ -1,9 +1,8 @@
 <link rel="stylesheet" type="text/css" href="media/style/common/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" href="media/script/gridster/jquery.gridster.css" />
-<link rel="stylesheet" href="../assets/plugins/dashboard/dashboard/css/dashboard.css" />
-<link rel="stylesheet" href="../assets/plugins/dashboard/dashboard/css/colors.css" />
+[+EvoDashboard_css+]
+[+EvoDashboard_color_css+]
 <link rel="stylesheet" href="media/style/common/font-awesome/css/font-awesome.min.css" />
-
 <div class="container-fluid dashboard">
 
 
@@ -15,7 +14,19 @@
       [+config_check_results+]
     </div>
   </div>
-
+  <!---  
+      <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Restore widget
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" class="panel-open show-full" data-id="modxwelcome_widget"> [+welcome_title+]</a></li>
+    <li><a href="#" class="panel-open show-full" data-id="modxonline_widget">[+onlineusers_title+]</a></li>
+    <li><a href="#" class="panel-open show-full" data-id="modxrecent_widget">[+activity_title+]</a></li>
+    <li><a href="#" class="panel-open show-full" data-id="modxnews_widget">[+modx_news_title+]</a></li>
+    <li><a href="#" class="panel-open show-full" data-id="modxsecurity_widget">[+modx_security_notices_title+]</a></li>
+  </ul>
+</div>
+--->    
 </div>
 
 <!-- end  title -->
