@@ -4,11 +4,14 @@ Instructions:
 System event:
 OnManagerWelcomeHome,OnManagerPageInit
 Configuration:
-&ShowLogo=Show Logo and Title:;list;show,hide;hide;;Show deprecated Dashboard header with logo and site name &LogoPath=Logo Path:;string;../assets/images/logo.png;;set here your custom logo path &welcome_showhide=Show Welcome Widget:;list;show,hide;show &userinfo_showhide=Show User Info inside Welcome widget:;list;show,hide;show &modxwelcome_datarow=welcome widget row position:;string;1;;1-10 &modxwelcome_datacol=welcome widget col position:;string;1;;1-4 &modxwelcome_datasizex=welcome widget x size:;string;2;;1-4 &modxwelcome_datasizey=welcome widget y size:;string;6;;1-10 &onlineinfo_showhide=Show Online Info Widget:;list;show,hide;show &onlineinfo_datarow=onlineinfo widget row position:;string;1;;1-10 &onlineinfo_datacol=onlineinfo widget col position:;string;3;;1-4 &onlineinfo_datasizex=onlineinfo widget x size:;string;2;;1-4 &onlineinfo_datasizey=onlineinfo widget y size:;string;6;;1-4 &recentinfo_showhide=Show Recent Info Widget:;list;show,hide;show &modxrecent_datarow=recent resource widget row position:;string;3;;1-10 &modxrecent_datacol=recent resource widget col position:;string;1;;1-4 &modxrecent_datasizex=recent resource widget x size:;string;4;;1-4 &modxrecent_datasizey=recent resource widget y size:;string;7;;1-10 &modxnews_showhide=Show ModxNews Widget:;list;show,hide;show &modxnews_datarow=modx news widget row position:;string;4;;1-10 &modxnews_datacol=modx news widget col position:;string;1;;1-4 &modxnews_datasizex=modx news widget x size:;string;2;;1-4 &modxnews_datasizey=modx news widget y size:;string;5;;1-10 &modxsecuritynews_showhide=Show SecurityNews Widget:;list;show,hide;show &security_datarow=modx security widget row position:;string;4;;1-10 &security_datacol=modx security widget col position:;string;2;;1-4 &security_datasizex=modx security widget x size:;string;2;;1-4 &security_datasizey=modx security widget y size:;string;5;;1-10 &use_theme_css=Use theme styles:;list;yes,no;no;;Use dashboard.css of current manager theme. &use_color_css=Use color css:;list;yes,no;yes;;Load extra color css for more icons styles and colors, used with Social Widget and Custom Links Widget.
+&ShowLogo=Show Logo and Title:;list;show,hide;hide;;Show deprecated Dashboard header with logo and site name &LogoPath=Logo Path:;string;../assets/images/logo.png;;set here your custom logo path &welcome_showhide=Show Welcome Widget:;list;show,hide,ManagersOnly;show &userinfo_showhide=Show User Info inside Welcome widget:;list;show,hide,ManagersOnly;show &modxwelcome_datarow=welcome widget row position:;string;1;;1-10 &modxwelcome_datacol=welcome widget col position:;string;1;;1-4 &modxwelcome_datasizex=welcome widget x size:;string;2;;1-4 &modxwelcome_datasizey=welcome widget y size:;string;6;;1-10 &onlineinfo_showhide=Show Online Info Widget:;list;show,hide,ManagersOnly;show &onlineinfo_datarow=onlineinfo widget row position:;string;1;;1-10 &onlineinfo_datacol=onlineinfo widget col position:;string;3;;1-4 &onlineinfo_datasizex=onlineinfo widget x size:;string;2;;1-4 &onlineinfo_datasizey=onlineinfo widget y size:;string;6;;1-4 &recentinfo_showhide=Show Recent Info Widget:;list;show,hide,ManagersOnly;show &modxrecent_datarow=recent resource widget row position:;string;3;;1-10 &modxrecent_datacol=recent resource widget col position:;string;1;;1-4 &modxrecent_datasizex=recent resource widget x size:;string;4;;1-4 &modxrecent_datasizey=recent resource widget y size:;string;7;;1-10 &modxnews_showhide=Show ModxNews Widget:;list;show,hide,ManagersOnly;show &modxnews_datarow=modx news widget row position:;string;4;;1-10 &modxnews_datacol=modx news widget col position:;string;1;;1-4 &modxnews_datasizex=modx news widget x size:;string;2;;1-4 &modxnews_datasizey=modx news widget y size:;string;5;;1-10 &modxsecuritynews_showhide=Show SecurityNews Widget:;list;show,hide,ManagersOnly;show &security_datarow=modx security widget row position:;string;4;;1-10 &security_datacol=modx security widget col position:;string;2;;1-4 &security_datasizex=modx security widget x size:;string;2;;1-4 &security_datasizey=modx security widget y size:;string;5;;1-10 &use_theme_css=Use theme styles:;list;yes,no;no;;Use dashboard.css of current manager theme. &use_color_css=Use color css:;list;yes,no;yes;;Load extra color css for more icons styles and colors, used with Social Widget and Custom Links Widget.
 */
 
 /* home switch home */
 $WelcomeUrl = isset($WelcomeUrl) ? $WelcomeUrl : '../assets/plugins/dashboard/welcome.tpl';
+
+// get manager role
+$role = $_SESSION['mgrRole'];
 
 //blocks
 $LogoOutput = isset($LogoOutput) ? $LogoOutput : '';
@@ -51,6 +54,10 @@ $UserInfo = $modx->getPlaceholder('UserInfo');
     
 /*show/hide user info inside Welcome widgets*/
 
+if(($role!=1) AND ($userinfo_showhide == 'ManagersOnly')) {
+$userinfo_display = '';
+}
+else 
 if ($userinfo_showhide == 'hide') {
 $userinfo_display = '';
 } else {
@@ -61,9 +68,14 @@ $userinfo_display = '<div class="userprofiletable">
 $modx->setPlaceholder('userinfo_display', $userinfo_display);
 
 /*show/hide MODX welcome widgets*/
+if(($role!=1) AND ($welcome_showhide == 'ManagersOnly')) {
+    $welcome_display = '';
+}
+else 
 if ($welcome_showhide == 'hide') {
 $welcome_display = '';
-} else {
+} 
+else{    
 $welcome_display = '<!---Welcome Logo and buttons---> 
       <!--- panel -->
       <li id="modxwelcome_widget" data-row="'.$modxwelcome_datarow.'" data-col="'.$modxwelcome_datacol.'" data-sizex="'.$modxwelcome_datasizex.'" data-sizey="'.$modxwelcome_datasizey.'">
@@ -100,9 +112,14 @@ $modx->setPlaceholder('welcome_display', $welcome_display);
 $onlineusers_title = $modx->getPlaceholder('onlineusers_title');
 $OnlineInfo = $modx->getPlaceholder('OnlineInfo');
 
+if(($role!=1) AND ($onlineinfo_showhide == 'ManagersOnly')) {
+$onlineinfo_display = '';
+}
+else 
 if ($onlineinfo_showhide == 'hide') {
 $onlineinfo_display = '';
-} else {
+} 
+else{  
 $onlineinfo_display = '<!---User Info--->
       <!--- panel --->
       <li id="modxonline_widget" data-row="'.$onlineinfo_datarow.'" data-col="'.$onlineinfo_datacol.'" data-sizex="'.$onlineinfo_datasizex.'" data-sizey="'.$onlineinfo_datasizey.'">
@@ -131,7 +148,10 @@ $modx->setPlaceholder('onlineinfo_display', $onlineinfo_display);
 //get modx placeholders
 $activity_title = $modx->getPlaceholder('activity_title');
 $RecentInfo = $modx->getPlaceholder('RecentInfo');
-
+if(($role!=1) AND ($recentinfo_showhide == 'ManagersOnly')) {
+    $recentinfo_display = '';
+}
+else 
 if ($recentinfo_showhide == 'hide') {
 $recentinfo_display = '';
 } else {
@@ -161,7 +181,11 @@ $modx->setPlaceholder('recentinfo_display', $recentinfo_display);
 //get modx placeholders
 $modx_news_title = $modx->getPlaceholder('modx_news_title');
 $modx_news_content = $modx->getPlaceholder('modx_news_content');
-
+$RecentInfo = $modx->getPlaceholder('RecentInfo');
+if(($role!=1) AND ($modxnews_showhide == 'ManagersOnly')) {
+    $modxnews_display = '';
+}
+else 
 if ($modxnews_showhide == 'hide') {
 $modxnews_display = '';
 } else {
@@ -191,6 +215,10 @@ $modx->setPlaceholder('modxnews_display', $modxnews_display);
 //get modx placeholders
 $modx_security_notices_title = $modx->getPlaceholder('modx_security_notices_title');
 $modx_security_notices_content = $modx->getPlaceholder('modx_security_notices_content');
+if(($role!=1) AND ($modxsecuritynews_showhide == 'ManagersOnly')) {
+    $modxsecuritynews_display = '';
+}
+else 
 if ($modxsecuritynews_showhide == 'hide') {
 $modxsecuritynews_display = '';
 } else {
