@@ -37,9 +37,9 @@ $e = &$modx->Event;
             /*show/hide MODX widgets*/
 $theme = $modx->getPlaceholder('theme');
 if ($use_theme_css == 'yes') {
-$Dashboard_css = '<link rel="stylesheet" href="../assets/plugins/dashboard/dashboard/css/dashboard.css">';
-} else {
 $Dashboard_css = '<link rel="stylesheet" href="media/style/'.$theme.'/dashboard/css/dashboard.css">';
+} else {
+$Dashboard_css = '<link rel="stylesheet" href="../assets/plugins/dashboard/dashboard/css/dashboard.css">';
 }    
 $modx->setPlaceholder('EvoDashboard_css', $Dashboard_css);
 // color css option
