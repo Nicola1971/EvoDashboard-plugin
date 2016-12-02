@@ -52,7 +52,7 @@ $modx->setPlaceholder('EvoDashboard_color_css', $Dashboard_color_css);
  
 //get modx placeholders
 $welcome_title = $modx->getPlaceholder('welcome_title');
-
+$site_name = $modx->getPlaceholder('site_name');
 $SecurityIcon = $modx->getPlaceholder('SecurityIcon');
 $WebUserIcon = $modx->getPlaceholder('WebUserIcon');
 $ModulesIcon = $modx->getPlaceholder('ModulesIcon');
@@ -256,7 +256,7 @@ $modxsecuritynews_display = '<!---Security News--->
 $modx->setPlaceholder('modxsecuritynews_display', $modxsecuritynews_display);
 
 /*Dashboard Header */
-
+$modx->setPlaceholder('site_name', $site_name);
 //logo
 if ($ShowLogo == 'show') {
 $logoimage = '<div class="wm_logo"><img src="'.$LogoPath.'" alt="[+logo_slogan+]" /></div>';
@@ -270,7 +270,7 @@ $dashboard_header = '   <!-- title-->
     <div class="row">
       <div class="col-sm-12">
       '.$logoimage.'
-        <h1>[+site_name+]</h1>
+        <h1>'.$site_name.'</h1>
       </div>
     </div>
   </div>';
