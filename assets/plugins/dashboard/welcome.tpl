@@ -8,12 +8,39 @@
 
   [+OnManagerWelcomePrerender+]
  [+dashboard_header+]
+<!-- logout reminder -->
+  <div id="logout_reminder" style="display:[+show_logout_reminder+]">
+      <div class="widget-wrapper alert alert-warning">
+        [+logout_reminder_msg+]
+      </div>
+  </div>
+
+  <!-- logout reminder -->
+  <div id="multiple_sessions" style="display:[+show_multiple_sessions+]">
+      <div class="widget-wrapper alert alert-warning">
+        [+multiple_sessions_msg+]
+      </div>
+  </div>
+
   <!-- alert -->
   <div style="display:[+config_display+]">
     <div class="widget-wrapper alert alert-warning">
       [+config_check_results+]
     </div>
   </div>
+  <!---  
+      <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Restore widget
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" class="panel-open show-full" data-id="modxwelcome_widget"> [+welcome_title+]</a></li>
+    <li><a href="#" class="panel-open show-full" data-id="modxonline_widget">[+onlineusers_title+]</a></li>
+    <li><a href="#" class="panel-open show-full" data-id="modxrecent_widget">[+activity_title+]</a></li>
+    <li><a href="#" class="panel-open show-full" data-id="modxnews_widget">[+modx_news_title+]</a></li>
+    <li><a href="#" class="panel-open show-full" data-id="modxsecurity_widget">[+modx_security_notices_title+]</a></li>
+  </ul>
+</div>
+--->    
 </div>
 
 <!-- end  title -->
@@ -34,7 +61,7 @@
   [+OnManagerWelcomeRender+] 
   <div class="container-fluid">
     <p class="text-muted pull-right">
-    [+button_pl_config+] <a class="btn btn-sm btn-default" onclick="cleanLocalStorage('[(site_name:encode_js)]-evodashboard.grid,[(site_name:encode_js)]-evodashboard.states')"><i class="fa fa-refresh" aria-hidden="true"></i> [+resetgrid+]</a>
+    [+button_pl_config+] <a class="btn btn-sm btn-default" onclick="cleanLocalStorage('[+site_name+]-evodashboard.grid,[+site_name+]-evodashboard.states')"><i class="fa fa-refresh" aria-hidden="true"></i> [+resetgrid+]</a>
     </p>
            <p class=" text-muted pull-left">
  EvoDashboard 3.1
@@ -51,7 +78,6 @@
 
   var localdata_position = JSON.parse(localStorage.getItem('[(site_name:encode_js)]-evodashboard.grid'));
   var localdata_states = JSON.parse(localStorage.getItem('[(site_name:encode_js)]-evodashboard.states'));
-
 
   fnCreateGridster('[(site_name:encode_js)]-evodashboard.grid', '[(site_name:encode_js)]-evodashboard.states');
 </script>
