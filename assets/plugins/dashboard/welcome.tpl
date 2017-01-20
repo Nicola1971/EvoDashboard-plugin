@@ -61,7 +61,7 @@
   [+OnManagerWelcomeRender+] 
   <div class="container-fluid">
     <p class="text-muted pull-right">
-    [+button_pl_config+] <a class="btn btn-sm btn-default" onclick="cleanLocalStorage('[+site_name+]-evodashboard.grid,[+site_name+]-evodashboard.states')"><i class="fa fa-refresh" aria-hidden="true"></i> [+resetgrid+]</a>
+    <a class="btn btn-sm btn-default" onclick="cleanLocalStorage('[+site_name+]-evodashboard.grid,[+site_name+]-evodashboard.states')"><i class="fa fa-refresh" aria-hidden="true"></i> [+resetgrid+]</a> [+button_pl_config+] 
     </p>
            <p class=" text-muted pull-left">
  EvoDashboard 3.2.1

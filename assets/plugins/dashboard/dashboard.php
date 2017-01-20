@@ -19,7 +19,7 @@ global $_lang;
 $result = $modx->db->select('id', $this->getFullTableName("site_plugins"), "name='{$modx->event->activePlugin}' AND disabled=0");
 $pluginid = $modx->db->getValue($result);
 if($modx->hasPermission('edit_plugin')) {
-$button_pl_config = '<a title="' . $_lang["settings_config"] . '" href="index.php?id='.$pluginid.'&a=102" class="btn btn-sm btn-default" ><i class="fa fa-cog"></i></a>';
+$button_pl_config = '<a title="' . $_lang["settings_config"] . '" href="index.php?id='.$pluginid.'&a=102" class="btn btn-sm btn-default" ><i class="fa fa-cog"></i> ' . $_lang["settings_config"] . '</a>';
 }
 $modx->setPlaceholder('button_pl_config', $button_pl_config);
 
