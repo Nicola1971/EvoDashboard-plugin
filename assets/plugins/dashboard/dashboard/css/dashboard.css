@@ -232,3 +232,85 @@ table > tbody > tr > td a.btn {
 	opacity : 0.3;
 	position : absolute;
 }
+
+/* dashboard */
+
+.dashboard .wm_logo {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.dashboard .wm_logo img {
+  height: 56px;
+}
+
+.wm_button a {
+  font-weight: normal !important;
+  color: #3d5764 !important;
+}
+
+.wm_button .fa {
+  margin-bottom: 5px;
+  font-size:2em;
+}
+/* -------------------------[ home page main links ]--- */
+
+a.hometblink,
+a.hometblink:active,
+a.hometblink:visited,
+a.hometblink:link,
+.hometblink {
+  text-decoration: underline;
+  color: #333;
+  font-weight: 500;
+}
+
+a.hometblink:hover {
+  text-decoration: underline;
+  color: Gray;
+}
+/* -------------------------[ Welcome Page ]--- */
+
+a.hometblink,
+a.hometblink img {
+  border: 0 !important;
+  text-decoration: none !important;
+}
+
+.wm_header {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dotted #bbb;
+}
+
+.wm_header_title {
+  margin: 0;
+}
+
+.wm_button {
+  display: inline-block;
+  margin: 0px 15px 15px 0px;
+  text-align: center;
+}
+
+.wm_messages {
+  margin-left: 20px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dotted #bbb;
+}
+
+.wm_messages .comment {
+  font-size: 12px;
+}
+
+.wm_messages_inbox_link {
+  text-decoration: none !important;
+  color: #333 !important;
+}
+
+.wm_messages_inbox_link:hover {
+  color: gray !important;
+}
