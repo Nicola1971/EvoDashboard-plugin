@@ -1,5 +1,5 @@
 <?php
-/* EvoDashboard 3.2.1 pl
+/* EvoDashboard 3.3.1 pl
 Instructions:
 System event:
 OnManagerWelcomeHome,OnManagerPageInit
