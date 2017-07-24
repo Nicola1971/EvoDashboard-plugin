@@ -23,6 +23,9 @@ body {
 	max-height : 270px;
 	overflow-y : auto!important;
 }
+div.panel-headingx.widget-title.sectionHeader.clearfix {
+ padding: .45rem 1rem .25rem 1rem; color: #616a73; font-size:70%; text-transform: uppercase; font-weight: 900; border: none; background-color: #f2f2f2;
+}
 div.widget-stage.sectionBody {
 	margin: 0;
 }
