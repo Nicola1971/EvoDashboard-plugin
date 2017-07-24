@@ -1,12 +1,12 @@
-<link rel="stylesheet" type="text/css" href="media/style/common/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="media/script/gridster/jquery.gridster.css" />
+
+<link rel="stylesheet" href="../assets/plugins/dashboard/dashboard/js/gridster/jquery.gridster.css" />
 [+EvoDashboard_css+]
 [+EvoDashboard_color_css+]
-<link rel="stylesheet" href="media/style/common/font-awesome/css/font-awesome.min.css" />
+
 <div class="container-fluid dashboard">
 
 
-  [+OnManagerWelcomePrerender+]
+  
  [+dashboard_header+]
 <!-- logout reminder -->
   <div id="logout_reminder" style="display:[+show_logout_reminder+]">
@@ -49,7 +49,7 @@
   <div class="gridster">
     <ul>
 
-[+OnManagerWelcomeHome+]      
+[+OnManagerWelcomePrerender+] 
 [+welcome_display+]      
 [+onlineinfo_display+]
 [+recentinfo_display+]
@@ -61,10 +61,10 @@
   [+OnManagerWelcomeRender+] 
   <div class="container-fluid">
     <p class="text-muted pull-right">
-    [+button_pl_config+] <a class="btn btn-sm btn-default" onclick="cleanLocalStorage('[+site_name+]-evodashboard.grid,[+site_name+]-evodashboard.states')"><i class="fa fa-refresh" aria-hidden="true"></i> [+resetgrid+]</a>
+    <a class="btn btn-sm btn-default" onclick="cleanLocalStorage('[+site_name+]-evodashboard.grid,[+site_name+]-evodashboard.states')"><i class="fa fa-refresh" aria-hidden="true"></i> [+resetgrid+]</a> [+button_pl_config+] 
     </p>
            <p class=" text-muted pull-left">
- EvoDashboard 3.1
+ EvoDashboard 3.3.1
 </p>
   </div>
 </div>

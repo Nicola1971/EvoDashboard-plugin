@@ -15,7 +15,7 @@ $datasizey = isset($datasizey) ? $datasizey : '2';
 //output
 $WidgetOutput = isset($WidgetOutput) ? $WidgetOutput : '';
 //events
-$EvoEvent = isset($EvoEvent) ? $EvoEvent : 'OnManagerWelcomeHome';
+$EvoEvent = isset($EvoEvent) ? $EvoEvent : 'OnManagerWelcomePrerender';
 $output = "";
 $e = &$modx->Event;
 

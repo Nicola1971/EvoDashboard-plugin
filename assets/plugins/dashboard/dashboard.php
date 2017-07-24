@@ -1,10 +1,10 @@
 <?php
-/* EvoDashboard 3.1.2 pl
+/* EvoDashboard 3.3.1 pl
 Instructions:
 System event:
 OnManagerWelcomeHome,OnManagerPageInit
 Configuration:
-&ShowHeader=Show Header:;menu;show,hide;hide;;Show deprecated Dashboard header with logo and site name &ShowLogo=Show logo image:;menu;show,hide;show;;Show logo image inside header &LogoPath=Logo Path:;string;../assets/images/logo.png;;set here your custom logo path &welcome_showhide=Show Welcome Widget:;menu;show,hide,AdminOnly;show &userinfo_showhide=Show User Info inside Welcome widget:;menu;show,hide,AdminOnly;show &modxwelcome_datarow=welcome widget row position:;string;1;;1-10 &modxwelcome_datacol=welcome widget col position:;string;1;;1-4 &modxwelcome_datasizex=welcome widget x size:;string;2;;1-4 &modxwelcome_datasizey=welcome widget y size:;string;6;;1-10 &onlineinfo_showhide=Show Online Info Widget:;menu;show,hide,AdminOnly;show &onlineinfo_datarow=onlineinfo widget row position:;string;1;;1-10 &onlineinfo_datacol=onlineinfo widget col position:;string;3;;1-4 &onlineinfo_datasizex=onlineinfo widget x size:;string;2;;1-4 &onlineinfo_datasizey=onlineinfo widget y size:;string;6;;1-4 &recentinfo_showhide=Show Recent resource Widget:;menu;show,hide,AdminOnly;show &modxrecent_datarow=recent resource widget row position:;string;3;;1-10 &modxrecent_datacol=recent resource widget col position:;string;1;;1-4 &modxrecent_datasizex=recent resource widget x size:;string;4;;1-4 &modxrecent_datasizey=recent resource widget y size:;string;7;;1-10 &modxnews_showhide=Show ModxNews Widget:;menu;show,hide,AdminOnly;show &modxnews_datarow=modx news widget row position:;string;4;;1-10 &modxnews_datacol=modx news widget col position:;string;1;;1-4 &modxnews_datasizex=modx news widget x size:;string;2;;1-4 &modxnews_datasizey=modx news widget y size:;string;5;;1-10 &modxsecuritynews_showhide=Show SecurityNews Widget:;menu;show,hide,AdminOnly;show &security_datarow=modx security widget row position:;string;4;;1-10 &security_datacol=modx security widget col position:;string;2;;1-4 &security_datasizex=modx security widget x size:;string;2;;1-4 &security_datasizey=modx security widget y size:;string;5;;1-10 &use_theme_css=Use theme styles:;menu;yes,no;no;;Use dashboard.css of current manager theme. &use_color_css=Use color css:;menu;yes,no;yes;;Load extra color css for more icons styles and colors, used with Social Widget and Custom Links Widget.
+&ShowHeader=Show Header:;menu;show,hide;hide;;Show deprecated Dashboard header with logo and site name &ShowLogo=Show logo image:;menu;show,hide;show;;Show logo image inside header &LogoPath=Logo Path:;string;../assets/images/modx-logo.png;;set here your custom logo path &ShowTitle=Show Site Name:;menu;show,hide;show;;Show header site name title &welcome_showhide=Show Welcome Widget:;menu;show,hide,AdminOnly;show &userinfo_showhide=Show User Info inside Welcome widget:;menu;show,hide,AdminOnly;show &messages_showhide=Show Messages inside User Info:;menu;show,hide,AdminOnly;show &modxwelcome_datarow=welcome widget row position:;string;1;;1-10 &modxwelcome_datacol=welcome widget col position:;string;1;;1-4 &modxwelcome_datasizex=welcome widget x size:;string;2;;1-4 &modxwelcome_datasizey=welcome widget y size:;string;6;;1-10 &onlineinfo_showhide=Show Online Info Widget:;menu;show,hide,AdminOnly;show &onlineinfo_datarow=onlineinfo widget row position:;string;1;;1-10 &onlineinfo_datacol=onlineinfo widget col position:;string;3;;1-4 &onlineinfo_datasizex=onlineinfo widget x size:;string;2;;1-4 &onlineinfo_datasizey=onlineinfo widget y size:;string;6;;1-4 &recentinfo_showhide=Show Recent resource Widget:;menu;show,hide,AdminOnly;show &modxrecent_datarow=recent resource widget row position:;string;3;;1-10 &modxrecent_datacol=recent resource widget col position:;string;1;;1-4 &modxrecent_datasizex=recent resource widget x size:;string;4;;1-4 &modxrecent_datasizey=recent resource widget y size:;string;7;;1-10 &modxnews_showhide=Show ModxNews Widget:;menu;show,hide,AdminOnly;show &modxnews_datarow=modx news widget row position:;string;4;;1-10 &modxnews_datacol=modx news widget col position:;string;1;;1-4 &modxnews_datasizex=modx news widget x size:;string;2;;1-4 &modxnews_datasizey=modx news widget y size:;string;5;;1-10 &modxsecuritynews_showhide=Show SecurityNews Widget:;menu;show,hide,AdminOnly;show &security_datarow=modx security widget row position:;string;4;;1-10 &security_datacol=modx security widget col position:;string;2;;1-4 &security_datasizex=modx security widget x size:;string;2;;1-4 &security_datasizey=modx security widget y size:;string;5;;1-10 &use_theme_css=Use theme styles:;menu;yes,no;yes;;Use dashboard.css of current manager theme. &use_color_css=Use color css:;menu;yes,no;yes;;Load extra color css for more icons styles and colors, used with Social Widget and Custom Links Widget
 */
 
 /* home switch home */
@@ -19,7 +19,7 @@ global $_lang;
 $result = $modx->db->select('id', $this->getFullTableName("site_plugins"), "name='{$modx->event->activePlugin}' AND disabled=0");
 $pluginid = $modx->db->getValue($result);
 if($modx->hasPermission('edit_plugin')) {
-$button_pl_config = '<a title="' . $_lang["settings_config"] . '" href="index.php?id='.$pluginid.'&a=102" class="btn btn-sm btn-default" ><i class="fa fa-cog"></i></a>';
+$button_pl_config = '<a title="' . $_lang["settings_config"] . '" href="index.php?id='.$pluginid.'&a=102" class="btn btn-sm btn-default" ><i class="fa fa-cog"></i> ' . $_lang["settings_config"] . '</a>';
 }
 $modx->setPlaceholder('button_pl_config', $button_pl_config);
 
@@ -37,9 +37,9 @@ $e = &$modx->Event;
             /*show/hide MODX widgets*/
 $theme = $modx->getPlaceholder('theme');
 if ($use_theme_css == 'yes') {
-$Dashboard_css = '<link rel="stylesheet" href="../assets/plugins/dashboard/dashboard/css/dashboard.css">';
-} else {
 $Dashboard_css = '<link rel="stylesheet" href="media/style/'.$theme.'/dashboard/css/dashboard.css">';
+} else {
+$Dashboard_css = '<link rel="stylesheet" href="../assets/plugins/dashboard/dashboard/css/dashboard.css">';
 }    
 $modx->setPlaceholder('EvoDashboard_css', $Dashboard_css);
 // color css option
@@ -91,8 +91,18 @@ $WmButtons = '<div class="wm_buttons">
                 </span>
               <!--@ENDIF-->
             </div>';
-
-//$UserInfo = $modx->getPlaceholder('UserInfo');
+//messages
+if ($messages_showhide == 'show') {
+$Messages = '<!--@IF:[[#hasPermission?key=messages]]-->
+                  <tr>
+                    <td>[%inbox%]</td>
+                    <td><a href="index.php?a=10"><b>[[#getMessageCount]]</b></a></td>
+                  </tr>
+                  <!--@ENDIF-->';
+} else {
+$Messages = '';
+}
+//$UserInfo
 $UserInfo = '<table class="table table-hover table-condensed">
                   <tr>
                     <td width="150">[%yourinfo_username%]</td>
@@ -110,12 +120,7 @@ $UserInfo = '<table class="table table-hover table-condensed">
                     <td>[%yourinfo_total_logins%]</td>
                     <td><b>[[$_SESSION[\'mgrLogincount\']:math(\'%s+1\')]]</b></td>
                   </tr>
-                  <!--@IF:[[#hasPermission?key=messages]]-->
-                  <tr>
-                    <td>[%inbox%]</td>
-                    <td><a href="index.php?a=10"><b>[[#getMessageCount]]</b></a></td>
-                  </tr>
-                  <!--@ENDIF-->
+                  '.$Messages.'
                 </table>';
 
 /*show/hide user info inside Welcome widgets*/
@@ -315,7 +320,7 @@ $modxsecuritynews_display = '<!---Security News--->
 $modx->setPlaceholder('modxsecuritynews_display', $modxsecuritynews_display);
 
 /*Dashboard Header */
-
+$site_name = $modx->getPlaceholder('site_name');
 //logo
 if ($ShowLogo == 'show') {
 $logoimage = '<div class="wm_logo"><img src="'.$LogoPath.'" alt="[+logo_slogan+]" /></div>';
@@ -323,13 +328,19 @@ $logoimage = '<div class="wm_logo"><img src="'.$LogoPath.'" alt="[+logo_slogan+]
 else {
 $logoimage = '';
 }
+if ($ShowTitle == 'show') {
+$HeaderTitle = '<h1>'.$site_name.'</h1>';
+}
+else {
+$HeaderTitle = '';
+}
 if ($ShowHeader == 'show') {
 $dashboard_header = '   <!-- title-->
   <div class="dashboard_header">
     <div class="row">
       <div class="col-sm-12">
       '.$logoimage.'
-        <h1>[+site_name+]</h1>
+     '.$HeaderTitle.'   
       </div>
     </div>
   </div>';
