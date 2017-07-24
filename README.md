@@ -1,4 +1,4 @@
-EvoDashboard-plugin 3.2.1 for MODX EVO 1.2.1
+EvoDashboard-plugin 3.3.1 for Evolution cms 1.3.3
 ===================
 Info and docs: http://www.tattoocms.it/extras/plugins/evodashboard-plugin-modx-evolution-dashboard.html
 
@@ -9,6 +9,9 @@ Info and docs: http://www.tattoocms.it/extras/plugins/evodashboard-plugin-modx-e
 
 
 # Upgrades
+## 3.3.1 PL
+* Update for Evolution cms 1.3.3 Release 
+
 ## 3.2.1 PL
 * New MODX EVO 1.2.1 Release update
 
