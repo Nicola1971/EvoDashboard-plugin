@@ -71,10 +71,8 @@
   </div>
 </div>
 
-<script src="media/script/jquery/jquery.min.js"></script>
 <script src='media/script/gridster/jquery.gridster.min.js'></script>
 <script src='../assets/plugins/dashboard/dashboard/js/evodashboard.js'></script>
-<script src="media/script/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
   //localStorage.clear();
 
