@@ -2,9 +2,7 @@ EvoDashboard-plugin 3.3.1 for Evolution cms 1.3.3
 ===================
 Info and docs: http://www.tattoocms.it/extras/plugins/evodashboard-plugin-modx-evolution-dashboard.html
 
-![evodashboard](https://github.com/Nicola1971/training-materials/blob/master/Images/evodash31-flat.png)
 
-![evodashboard](https://github.com/Nicola1971/training-materials/blob/master/Images/evodash31-re2.png)
 
 
 
