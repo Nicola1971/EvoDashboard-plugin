@@ -48,17 +48,19 @@
   <!-- GridSter widgets -->
   <div class="gridster">
     <ul>
-
 [+OnManagerWelcomePrerender+] 
-[+welcome_display+]      
-[+onlineinfo_display+]
-[+recentinfo_display+]
-[+modxnews_display+]
-[+modxsecuritynews_display+]
     </ul>           
   </div>
-  <!-- / GridStack widgets -->                    
-  [+OnManagerWelcomeRender+] 
+  <!-- / GridStack widgets --> 
+
+	<!-- end  title -->
+<div class="container container-body">
+	<div class="row form-row widgets">
+		[+widgets+]
+	</div>
+
+	<!--a class="btn btn-secondary mb-1"><i class="fa fa-cogs"></i> Добавить виджет</a-->
+
   <div class="container-fluid">
     <p class="text-muted pull-right">
     <a class="btn btn-sm btn-default" onclick="cleanLocalStorage('[+site_name+]-evodashboard.grid,[+site_name+]-evodashboard.states')"><i class="fa fa-refresh" aria-hidden="true"></i> [+resetgrid+]</a> [+button_pl_config+] 
