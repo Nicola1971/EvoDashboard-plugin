@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="../assets/plugins/dashboard/dashboard/js/gridster/jquery.gridster.css" />
 [+EvoDashboard_css+]
 [+EvoDashboard_color_css+]
