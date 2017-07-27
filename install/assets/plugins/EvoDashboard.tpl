@@ -2,7 +2,7 @@
 /**
  * EvoDashboard
  *
- * MODX Evolution Welcome Dashboard
+ * Evolution CMS Welcome Dashboard
  *
  * @author    Nicola Lambathakis
  * @category    plugin
